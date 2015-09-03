@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="lattes">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<title>Buscador Lattes</title>
+	</head>
+	<body ng-controller="lattesCtrl">
+		<div class="container">
+			<div class="bt"><a href="../untitled.html" class="btn btn-primary">Voltar</a></div>
+			<br><br>
+		 		<table class="table table-striped">
+			 		<tr>
+			 			<th>Autores</th>
+			 			<th>Artigo</th>
+
+			 		</tr>
+			 		<tr ng-repeat="x in pesquisamos ">
+			 			<td>{{x.autor}}</td>
+			 			<td>{{x.artigo}}</td>
+			 		</tr>
+		 		</table>
+		</div>
+	</body>
+	<script src="../lib/angular/angular.js"></script>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+</html>
