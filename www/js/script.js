@@ -1,23 +1,25 @@
 angular.module("lattes", ["ui.bootstrap"]);
-angular.module("lattes", ["ui.bootstrap"]).controller("lattesCtrl" ,function ($scope, $http)
+angular.module("lattes", ["ui.bootstrap"]).controller("lattesCtrl", function ($scope, $http)
 {
   $scope.isCollapsed = true;
-  $http.get("http://200.129.176.42:8085/Lattes1/php/professores.php")
+  //$http.get("http://200.129.176.42:8085/Lattes1/json/professores.json")
+  $http.get("js/professores.json")
   .success( function (data)
   {
     $scope.prof = data;
-  });
-  $scope.select = function ()
-  {
-    var pc = $scope.prof.url
-    $http.get(pc).success( function (data)
+    var url = data.url;
+    $scope.select = function ()
     {
-      $scope.selected_prof = data;
-    }).    
-    error(function (data) {
-        alert("ERRO 2!!!!");
-    });
-  };
+      //var pc = $scope.prof.url
+      $http.get(url).success( function (data11)
+      {
+        $scope.selected_prof = data11;
+      }).
+      error(function (data11) {
+          alert("ERRO 2!!!!");
+      });
+    };
+  });
   // $scope.nomes =
   // [
   //   {

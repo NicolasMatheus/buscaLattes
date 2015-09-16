@@ -4,16 +4,20 @@
 }
 center
 {
-	margin-top: 100px
+	margin-top: 50px
 }
-center h4
+center h3
 {
-	color: #1E90FF;
+	color: black;
+}
+center small
+{
+	color: black;
 }
 footer .iga
 {
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 100px;
 }
 a:link, a:visited, a:active, a:hover
 {

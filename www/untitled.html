@@ -14,7 +14,6 @@
 	</head>
 	<body ng-controller="lattesCtrl">
 		<div class="container">
-				<p>{{isCollapsedl}}</p>
 			<div class="row">
 			    <center>
 			        <img src="img/lattes1.png" width="80px" height="70px">
@@ -48,7 +47,7 @@
 				<table class="table">
 					<tr><th>Professores</th></tr>
 					<tr ng-repeat="name in prof | orderBy : 'nome' ">
-						<td ng-click="isCollapsed = !isCollapsed ; select()">
+						<td ng-click="isCollapsed = !isCollapsed ; select(name)">
 						    <img ng-src="img/teacher.png" class="thumb40">
 							{{name.nome}}
 							<i class="glyphicon glyphicon-circle-arrow-down"></i>
@@ -56,7 +55,7 @@
 							<div collapse="isCollapsed">
 								<div class="well well-lg">
 									<div>
-										<table class="table">
+										<table class="table table-hover">
 											<tr>
 												<th>Autores</th>
 												<th>Artigo</th>
@@ -69,7 +68,7 @@
 											</tr>
 										</table>
 									</div>
-								</div> 
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -85,7 +84,7 @@
     <!-- ====================================== -->
     <!-- ====================================== -->
 	<!-- <script src="lib/angular/angular.js"></script> -->
-	<script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+		<script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.js"></script>
     <script src="js/script.js"></script>
