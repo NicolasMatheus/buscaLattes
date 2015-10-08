@@ -1,0 +1,78 @@
+*
+{
+  margin:0; padding:0; border:0; background:transparent;
+  vertical-align: baseline;
+}
+header 
+{
+  min-height: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #1E88E5;
+}
+header h3 
+{
+	padding: 2px 10px 3px 5px;
+	color: white;
+}
+header .imgn
+{
+	position: absolute;
+	top: 22px;
+	left: 147px;
+}
+header #icone
+{
+	position: absolute;
+	top: 22px;
+	left: 300px;	
+}
+header #voltaIcone
+{
+	position: absolute;
+	top: 5px;
+	left: 6px;
+}
+.voltarIcone
+{
+	position: absolute;
+	top: 5px;
+	left: 6px;	
+}
+.sobre
+{
+  min-height: 35px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #1E88E5;
+}
+.tabelas
+{
+  min-height: 35px;
+  position: fixed;
+  top: 0;
+  right: 0
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #1E88E5;
+}
+a:link, a:visited, a:active
+{
+	text-decoration: none;
+	color: black;
+}
+a:hover 
+{
+	text-decoration: none;
+}
+.img-circle
+{
+	max-width: 30px;
+	max-height: 30px;
+}

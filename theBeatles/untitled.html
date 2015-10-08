@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="lattes">
+	<head>
+		<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script src="lib/angular/angular.js"></script>
+		<title>Buscador Lattes</title>
+	</head>
+	<body ng-controller="lattesCtrl">
+		<div class="container">
+			<div class="row">
+			    <center>
+			        <img src="img/lattes1.png" width="80px" height="70px">
+			        <h4><b>Curriculum lattes</b></h4>
+			        <small>* App rustico breve alterações seram feitas muito em breve</small>
+			        <br><br><br><br>
+<!-- 			        <hr> -->
+			    </center>
+		    </div>
+		    <!-- ====================================== -->
+		    <!-- ====================================== -->
+		    <!-- ====================================== -->
+		<!-- 	    <div>
+		    	<center>
+				    <table class="table">
+				    	<tr>
+				    		<th>Professores</th>
+				    	</tr>
+				    	<tr ng-click="select(name)">
+				    		<td>
+				    			<img ng-src="img/teacher.png" class="thumb40">
+				    			{{name.nome}}
+				    		</td>
+				    	</tr>
+				    </table>
+				    <hr>
+				</center>
+			</div> -->
+			<div>
+			<center>
+				<table class="table">
+					<tr><th>Professores</th></tr>
+					<tr ng-repeat="name in prof | orderBy : 'nome' ">
+						<td ng-click="isCollapsed = !isCollapsed ; select(name)">
+						    <img ng-src="img/teacher.png" class="thumb40">
+							{{name.nome}}
+							<i class="glyphicon glyphicon-circle-arrow-down"></i>
+							<br>
+							<div collapse="isCollapsed">
+								<div class="well well-lg">
+									<div>
+										<table class="table table-hover">
+											<tr>
+												<th>Autores</th>
+												<th>Artigo</th>
+												<th>Evento</th>
+											</tr>
+											<tr ng-repeat="x in selected_prof">
+												<td>{{x.autor}}</td>
+												<td>{{x.artigo}}</td>
+												<td>{{x.evento}}</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				</center>
+			</div>
+			<!-- ====================================== -->
+		    <!-- ====================================== -->
+		    <!-- ====================================== -->
+		</div>
+	</body>
+	<!-- ====================================== -->
+    <!-- ====================================== -->
+    <!-- ====================================== -->
+	<!-- <script src="lib/angular/angular.js"></script> -->
+		<script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</html>
