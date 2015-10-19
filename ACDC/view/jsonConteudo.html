@@ -1,0 +1,14 @@
+<!-- table com os conteudos dos json -->
+<section ng-show="aqui">
+	<table class="table table-striped">
+		<tr>
+			<th>Artigo</th>
+			<th>Autor</th>
+		</tr>
+		<tr ng-repeat="objc in selectedNome">
+			<td>{{objc.artigo}}</td>
+			<td>{{objc.autor}}</td>
+		</tr>
+	</table>
+</section>
+<!-- table com os conteudos dos json -->
