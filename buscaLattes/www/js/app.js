@@ -29,7 +29,7 @@ angular.module('lattes', ['ionic', 'lattes.controllers'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'LattesCtrl'
   })
 
   .state('app.search', {
