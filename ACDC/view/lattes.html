@@ -8,20 +8,17 @@
 		</section>
 		<!-- Cabeçalho Primario-->
 	</header>
-	<!-- Cabeçalho -->		
-	<br><br>
-	<br><br>
+	<!-- Cabeçalho -->
+	<br><br><br><br>
 	<!-- Tabela de professores -->
 	<section ng-hide="aqui">
 		<table class="table table-striped">
 			<tr>
 				<th>Professores</th>
 			</tr>
-			<tr ng-repeat="name in prof | orderBy : 'nome' " 
-			ng-click="select(name);mestreDosMagos(name)">
+			<tr ng-repeat="name in prof | orderBy : 'nome' " ng-click="select(name);mestreDosMagos(name)">
 				<td>
-					<img ng-src="img/teacher.png" 
-					alt="perfilProfessores" class="img-circle">
+					<img ng-src="img/teacher.png" alt="perfilProfessores" class="img-circle">
 					<a href="#/opcoesLattes">{{name.nome}}</a>
 				</td>
 			</tr>
