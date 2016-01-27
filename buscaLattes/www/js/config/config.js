@@ -12,6 +12,7 @@ angular.module('lattes.config', [])
     controller: 'LattesCtrl'
   })
 
+/*
   .state('app.search',
   {
     url: '/search',
@@ -22,6 +23,7 @@ angular.module('lattes.config', [])
       }
     }
   })
+*/
 
   .state('app.home',
   {
@@ -41,19 +43,19 @@ angular.module('lattes.config', [])
         'menuContent':
         {
           templateUrl: 'templates/professores.html',
-          controller: 'PlaylistsCtrl'
+          controller: 'ProfessoresCtrl'
         }
       }
     })
 
   .state('app.single',
   {
-    url: '/playlists/:playlistId',
+    url: '/professores/:professorId',
     views: {
       'menuContent':
       {
         templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        controller: 'ProfessorCtrl'
       }
     }
   });
