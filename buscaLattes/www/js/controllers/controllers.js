@@ -1,6 +1,6 @@
 angular.module('lattes.controllers', [])
 
-.controller('LattesCtrl', function($scope, $ionicModal, $timeout)
+.controller('LattesCtrl', function($scope, $ionicModal, $timeout, $http)
 {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -48,8 +48,34 @@ angular.module('lattes.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope)
+.controller('PlaylistsCtrl', function($scope, $http)
 {
+
+  var carregarProfessores = function ()
+  {
+          //$http.get("http://10.101.0.251:8085/Lattes1/json/professores.json").success(function (data)
+          $http.get("http://200.129.176.42:8085/Lattes1/json/professores.json").success(function (data)
+          //$http.get("js/professores2.json").success(function (data)
+          {
+                  $scope.prof = data;
+          });
+  };
+  carregarProfessores();
+  // $scope.select = function (name)
+  // {
+  //         var pegarJson = function ()
+  //         {
+  //                 //$http.get("http://10.101.0.251:8085/Lattes1/json/" + name.id + ".json").success(function (data)
+  //                 //var path = "http://200.129.176.42:8085/Lattes1/json/" + name.id + ".json";
+  //                 //$http.get(path).success(function (data)
+  //                 $http.get("http://200.129.176.42:8085/Lattes1/json/" + name.id + ".json").success(function (data)
+  //                 {
+  //                         $scope.selectedNome = data;
+  //                 });
+  //         };
+  //         pegarJson();
+  //};
+
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
