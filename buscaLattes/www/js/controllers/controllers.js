@@ -74,7 +74,7 @@ angular.module('lattes.controllers', [])
   //                 });
   //         };
   //         pegarJson();
-  //};
+  //});
 
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
