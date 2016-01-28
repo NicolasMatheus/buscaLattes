@@ -1,7 +1,7 @@
 <ion-view view-title="Professores">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="name in prof | orderBy : 'nome' "  href="#/app/professores/" ng-click="select(name)">
+      <ion-item ng-repeat="name in prof | orderBy : 'nome' "  ng-href="#/app/professores/" ng-click="select(name)">
         {{name.nome}}
       </ion-item>
     </ion-list>

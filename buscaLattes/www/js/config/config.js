@@ -9,22 +9,8 @@ angular.module('lattes.config', [])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'LattesCtrl'
+    controller: 'ProfessoresCtrl'
   })
-
-/*
-  .state('app.search',
-  {
-    url: '/search',
-    views: {
-      'menuContent':
-      {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-*/
-
   .state('app.home',
   {
       url: '/home',
@@ -50,12 +36,12 @@ angular.module('lattes.config', [])
 
   .state('app.single',
   {
-    url: '/professores/:professorId',
+    url: '/professores/',
     views: {
       'menuContent':
       {
-        templateUrl: 'templates/playlist.html',
-        controller: 'ProfessorCtrl'
+        templateUrl: 'templates/professor.html',
+        controller: 'ProfessoresCtrl'
       }
     }
   });
