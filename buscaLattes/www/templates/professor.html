@@ -1,9 +1,9 @@
 <ion-view view-title="Professor">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="objc in selectedNome | orderBy : 'nome' ">
-        {{objc.artigo}}
-        Nicolas
+      <ion-item ng-repeat="ob in selectedNome">
+        {{ob.artigo}}
+        {{ob.autor}}
       </ion-item>
       Nicolas
     </ion-list>

@@ -2,7 +2,9 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="name in prof | orderBy : 'nome' "  ng-href="#/app/professores/" ng-click="select(name)">
-        {{name.nome}}
+        <i class="icon ion-android-person">
+          {{name.nome}}
+        </i>
       </ion-item>
     </ion-list>
   </ion-content>
