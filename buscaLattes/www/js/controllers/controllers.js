@@ -5,10 +5,19 @@ angular.module('lattes.controllers', [])
   var carregarProfessores = function ()
   {
           //$http.get("http://10.101.0.251:8085/Lattes1/json/professores.json").success(function (data)
-          $http.get("http://200.129.176.42:8085/Lattes1/json/professores.json").success(function (data)
-          {
+          $http.get("http://200.129.176.42:8085/Lattes1/json/professores.json")
+            .success(function (data)
+            {
                   $scope.prof = data;
-          });
+            })
+            .error(function(erro)
+            {
+              $http.get("http://10.101.0.251:8085/Lattes1/json/professores.json")
+                .success(function (data)
+                {
+                  $scope.prof = data;
+                });
+            });
   };
   carregarProfessores();
 
@@ -17,10 +26,19 @@ angular.module('lattes.controllers', [])
           var pegarJson = function ()
           {
                   //$http.get("http://10.101.0.251:8085/Lattes1/json/" + name.id + ".json").success(function (data)
-                  $http.get("http://200.129.176.42:8085/Lattes1/json/" + name.id + ".json").success(function (data)
-                  {
+                  $http.get("http://200.129.176.42:8085/Lattes1/json/" + name.id + ".json")
+                    .success(function (data)
+                    {
                           $scope.selectedNome = data;
-                  });
+                    })
+                    .erro(function(erro)
+                    {
+                      $http.get("http://10.101.0.251:8085/Lattes1/json/" + name.id + ".json")
+                        .success(function (data)
+                        {
+                          $scope.selectedNome = data;
+                        });
+                    });
           };
           pegarJson();
  };
