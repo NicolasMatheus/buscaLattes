@@ -41,7 +41,7 @@ angular.module('lattes.config', [])
       'menuContent':
       {
         templateUrl: 'templates/professor.html',
-        controller: 'ProfessoresCtrl'
+        controller: 'ProfessoreCtrl'
       }
     }
   });

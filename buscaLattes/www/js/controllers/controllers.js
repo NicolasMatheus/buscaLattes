@@ -20,8 +20,9 @@ angular.module('lattes.controllers', [])
             });
   };
   carregarProfessores();
-
-  $scope.select = function (name)
+})
+.controller('ProfessoreCtrl', function($scope, $http){
+  /*$scope.*/function select(name)
   {
           var pegarJson = function ()
           {
