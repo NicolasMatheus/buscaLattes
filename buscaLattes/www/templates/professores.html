@@ -1,7 +1,7 @@
 <ion-view view-title="Professores">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="name in prof | orderBy : 'nome' " ui-sref="app.single({id : name.id})">
+      <ion-item ng-repeat="name in prof | orderBy : 'nome' " ui-sref="app.single({id : name.id, nome: name.nome})">
         <i class="icon ion-android-person">
           {{name.nome}}
         </i>

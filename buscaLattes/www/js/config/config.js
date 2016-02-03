@@ -36,7 +36,7 @@ angular.module('lattes.config', [])
 
   .state('app.single',
   {
-    url: '/professores/:id',
+    url: '/professores/:id/:nome',
     views: {
       'menuContent':
       {
