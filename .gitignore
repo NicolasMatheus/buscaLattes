@@ -38,5 +38,17 @@ Thumbs.db
 #bower lib
 ###############
 lib/**/*
+
 *~
 *.swp
+
+#ionic lib#
+##################
+lib/ionic/*
+
+# Multimidia #
+# ###########
+*.png
+*.jpg
+*.mp4
+*.mp3
