@@ -1,4 +1,10 @@
 {
   "name": "buscaLattes",
-  "app_id": ""
+  "app_id": "",
+  "proxies":[
+     {
+        "path":"/professores.json",
+        "proxyUrl":"http://200.129.176.42:8085/Lattes1/json/buscaLattes/professores.json"
+     }
+  ]
 }

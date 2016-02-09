@@ -5,10 +5,14 @@
         An Ionic Framework and Cordova project.
     </description>
   <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+      Nícolas Matheus Martins Vaz
     </author>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="http://*"  launch-external="yes"/>
+  <access origin="https://*" launch-external="yes"/>
+  <allow-intent href="*"/>
+  <allow-navigation href="http://200.129.176.42:8085/Lattes1/json/buscaLattes/professores.json"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -39,4 +43,5 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>

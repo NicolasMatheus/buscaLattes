@@ -29,7 +29,6 @@ angular.module('lattes.controllers', [])
 })
 .controller('ProfessoreCtrl', function($scope, $http, $stateParams)
 {
-  //console.log(select(name));
 var pegarJson = function ()
           {
             $scope.k = $stateParams.nome;
@@ -57,7 +56,7 @@ var pegarJson = function ()
           };
 
   $scope.$on('$ionicView.enter', function()
-    {
-      pegarJson();
-    });
+  {
+    pegarJson();
+  });
 });
