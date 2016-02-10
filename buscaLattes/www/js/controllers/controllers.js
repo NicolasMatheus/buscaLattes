@@ -34,11 +34,11 @@ var pegarJson = function ()
             $scope.k = $stateParams.nome;
             var n = $stateParams.id;
 
-            var REC = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/" + n+ ".json";
-            var rec = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/" + n + ".json";
 
-                  console.log(REC);
-                  console.log(rec);
+            var rec = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/"+ n +"/"+ n +".json";
+            var REC = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/"+ n +"/"+ n + ".json";
+                  // console.log(REC);
+                  // console.log(rec);
 
                   $http.get(REC)
                     .success(function (data)
