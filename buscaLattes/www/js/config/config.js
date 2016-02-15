@@ -1,5 +1,16 @@
 angular.module('lattes.config', [])
 
+/*  appropriate CORS headers globally  */
+
+.config(function($httpProvider)
+{
+  $httpProvider.defaults.useXDomain = true;
+  $httpProvider.defaults.headers.common = 'Content-Type: application/json';
+  $httpProvider.defaults.withCredentials = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+})
+/*  appropriate CORS headers globally  */
+
 .config(function($stateProvider, $urlRouterProvider)
 {
   $stateProvider
