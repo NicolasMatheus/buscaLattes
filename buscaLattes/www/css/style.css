@@ -1,8 +1,41 @@
 /* Empty. Add your own CSS if you like */
-.gredesLogo
+
+/*
+ * Image Home page
+ */
+.AppLogo
 {
-  top:50%;
+  top:30%;
   margin-left: 23%;
-  width: 90%;
+  width: 100%;
   height: auto;
+}
+/*
+ * Imagem Gredes About
+ */
+.aboutGredeLogo
+{
+    position: absolute;
+    left: 70px;
+    top: 70px;
+}
+/*
+ * About links
+ */
+.aboutText > p > a:link,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration: none;
+}
+/*
+ * About text
+ */
+.aboutText
+{
+   margin-top:350px;
+   margin-left:110px;
+   margin-right:auto;
+   margin-bottom:auto;
 }
