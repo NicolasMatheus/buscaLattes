@@ -4,44 +4,34 @@
       <div class="item item-icon-left">
         <h2><center>{{k}}</center></h2>
         <i class="icon ion-happy"></i>
-        <!--<img src="img/gredes.png" alt="avatar">-->
       </div>
     </div>
     <ion-list>
-    <!--<ion-item ng-repeat="ob in selectedNome">
         {{ob.artigo}}
-      </ion-item>-->
-      <ion-checkbox>Produção tecnica</ion-checkbox>
-      <ion-checkbox>Participação em eventos</ion-checkbox>
-      <!--<ion-checkbox>Produção bibliografica</ion-checkbox>
-      <ion-checkbox>Projetos de pesquisa</ion-checkbox>
-      <ion-checkbox>Orientações</ion-checkbox>-->
+      <ion-checkbox ng-model="test">Produção tecnica</ion-checkbox>
+      <ion-checkbox ng-model="test2">Participação em eventos</ion-checkbox>
     </ion-list>
     <div class="list">
-      <div class="item item-divider"><h2>Produção tecnica</h2></div>
-        <p class="item" ng-repeat="ob in selectedNome | orderBy: ' artigo '">
-          {{ob.artigo}}
-        </p>
-      <div class="item item-divider"><h2>Participação em eventos</h2></div>
-      <div ng-repeat="ob in selectedNome | orderBy: [evente,publicadao,conferencia] ">
-        <p class="item">
-          {{ob.evento}}
-          {{ob.publicadao}}
-          {{ob.conferencia}}
-        </p>
-      </div>
-      <!--<div class="item item-divider"><h2>Produção bibliografica</h2></div>
-        <p class="item" ng-repeat="ob in selectedNome">
-          {{}}
-        </p>
-      <div class="item item-divider"><h2>Projetos de pesquisa</h2></div>
-        <p class="item" ng-repeat="ob in selectedNome">
-          {{}}
-        </p>
-      <div class="item item-divider"><h2>Orientações</h2></div>
-        <p class="item" ng-repeat="ob in selectedNome">
-          {{}}
-        </p>-->
+		<div ng-show="test">
+			<div class="item item-divider">
+				<h2>Produção tecnica</h2>
+			</div>
+				<p class="item"
+					ng-repeat="ob in selectedNome | orderBy: ' artigo '">
+          			{{ob.artigo}}
+				</p>
+		</div>
+		<div ng-show="test2">
+			<div class="item item-divider">
+				<h2>Participação em eventos</h2>
+			</div>
+				<p class="item"
+				ng-repeat="ob in selectedNome | orderBy: ['evente','publicadao','conferencia']">
+         			{{ob.evento}}
+          			{{ob.publicadao}}
+          			{{ob.conferencia}}
+				</p>
+		</div>
     </div>
   </ion-content>
 </ion-view>
