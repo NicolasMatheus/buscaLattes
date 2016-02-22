@@ -1,15 +1,16 @@
 angular.module('lattes.config', [])
 
-/*  appropriate CORS headers globally  */
+/*  appropriate CORS headers globally
 
 .config(function($httpProvider)
 {
   $httpProvider.defaults.useXDomain = true;
-  $httpProvider.defaults.headers.common = 'Content-Type: application/json';
   $httpProvider.defaults.withCredentials = true;
-  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  delete $httpProvider.defaults.headers.common["X-Requested-With"];
+  $httpProvider.defaults.headers.common["Accept"] = "application/json";
+  $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
 })
-/*  appropriate CORS headers globally  */
+  appropriate CORS headers globally */
 
 .config(function($stateProvider, $urlRouterProvider)
 {
@@ -33,6 +34,19 @@ angular.module('lattes.config', [])
         }
       }
     })
+    .state('app.about',
+     {
+      url: '/about',
+      views:
+      {
+        'menuContent':
+        {
+          templateUrl: 'templates/about.html',
+          controller: 'ProfessoresCtrl'
+        }
+      }
+    })
+
     .state('app.professores',
     {
       url: '/professores',
@@ -56,6 +70,7 @@ angular.module('lattes.config', [])
       }
     }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
