@@ -7,6 +7,7 @@ angular.module('lattes.controllers', [])
           var URL = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/professores.json";
           var url = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/professores.json";
 
+              console.log(URL);
           $http.get(URL)
             .success(function (data)
             {
@@ -37,8 +38,8 @@ var pegarJson = function ()
 
             var rec = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/"+ n +"/"+ n +".json";
             var REC = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/"+ n +"/"+ n + ".json";
-                  // console.log(REC);
-                  // console.log(rec);
+                   console.log(REC);
+                   console.log(rec);
 
                   $http.get(REC)
                     .success(function (data)
