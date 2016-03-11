@@ -1,1 +1,0 @@
-angular.module('buscaLattes', ['ngRoute', 'ui.bootstrap']);
