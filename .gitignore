@@ -45,6 +45,11 @@ lib/**/*
 #ionic lib#
 ##################
 lib/ionic/*
+node_modules/
+platforms/
+plugins/
+www/lib/**/
+www/lib/ionic/**/*
 
 # Multimidia #
 # ###########
