@@ -1,25 +1,10 @@
 <ion-view view-title="Professor">
-  <ion-content>
-    <div class="list card">
-        <div class="item item-avatar">
-            <img ng-src="{{picProfessor}}" alt="Imagem do professor">
-            <h2>{{nomeProfessor}}</h2>
-        </div>
-        <div class="item item-body">
-        </div>
-    </div>
-    <ion-item ng-repeat="dados in selected">
-        <p>
-            {{
-                dados
-                    .CURRICULO_VITAE
-                    .DADOS_GERAIS
-                    .ENDERECO
-                    .ENDERECO_PROFISSIONAL
-                    ._CODIGO_INSTITUICAO_EMPRESA
-            }}
-        </p>
-    </ion-item>
-
-  </ion-content>
+	<ion-content>
+		<div class="list card">
+			<div class="item item-avatar">
+				<img ng-src="{{picProfessor}}" alt="Imagem do professor">
+            	<h2>{{nomeProfessor}}</h2>
+			</div>
+    	</div>
+  	</ion-content>
 </ion-view>
