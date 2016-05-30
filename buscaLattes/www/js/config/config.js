@@ -1,5 +1,4 @@
 angular.module('lattes.config', [])
-
 /*  appropriate CORS headers globally
 
 .config(function($httpProvider)
@@ -10,67 +9,52 @@ angular.module('lattes.config', [])
   $httpProvider.defaults.headers.common["Accept"] = "application/json";
   $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
 })
-  appropriate CORS headers globally */
+ appropriate CORS headers globally */
 
-.config(function($stateProvider, $urlRouterProvider)
-{
-  $stateProvider
+.config(function($stateProvider, $urlRouterProvider) {
 
-    .state('app',
-    {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'ProfessoresCtrl'
-  })
-  .state('app.home',
-  {
-      url: '/home',
-      views:
-      {
-        'menuContent':
-        {
-          templateUrl: 'templates/home.html'
-        }
-      }
+    $stateProvider
+    .state('app',{
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'ProfessoresCtrl'
     })
-    .state('app.about',
-     {
-      url: '/about',
-      views:
-      {
-        'menuContent':
-        {
-          templateUrl: 'templates/about.html',
-          controller: 'ProfessoresCtrl'
+    .state('app.home', {
+        url: '/home',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/home.html'
+            }
         }
-      }
     })
-
-    .state('app.professores',
-    {
-      url: '/professores',
-      views: {
-        'menuContent':
-        {
-          templateUrl: 'templates/professores.html',
-          controller: 'ProfessoresCtrl'
+    .state('app.about', {
+        url: '/about',
+        views:{
+            'menuContent':{
+                templateUrl: 'templates/about.html',
+                controller: 'ProfessoresCtrl'
+            }
         }
-      }
     })
-
-  .state('app.single',
-  {
-    url: '/professores/:id/:nome',
-    views: {
-      'menuContent':
-      {
-        templateUrl: 'templates/professor.html',
-        controller: 'ProfessoreCtrl'
-      }
-    }
-  });
-
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+    .state('app.professores', {
+        url: '/professores',
+        views: {
+            'menuContent':{
+                templateUrl: 'templates/professores.html',
+                controller: 'ProfessoresCtrl'
+            }
+        }
+    })
+    .state('app.single', {
+        url: '/professores/:id/:nome',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/professor.html',
+                controller: 'ProfessoreCtrl'
+            }
+        }
+    });
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/home');
 });
