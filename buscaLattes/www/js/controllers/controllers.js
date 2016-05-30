@@ -31,8 +31,10 @@ angular.module('lattes.controllers', [])
 
 .controller('ProfessoreCtrl', function($scope, $http, $stateParams)
 {
-var pegarJson = function ()
-          {
+var pegarJson = function (){
+
+    $scope.choice = true;
+
             $scope.nomeProfessor = $stateParams.nome;
             var idProfessor = $stateParams.id;
 
