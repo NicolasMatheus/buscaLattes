@@ -28,32 +28,38 @@ angular.module('lattes.controllers', [])
     carregarProfessores();
   });
 })
+
 .controller('ProfessoreCtrl', function($scope, $http, $stateParams)
 {
 var pegarJson = function ()
           {
-            $scope.k = $stateParams.nome;
-            var n = $stateParams.id;
+            $scope.nomeProfessor = $stateParams.nome;
+            var idProfessor = $stateParams.id;
 
 
-            var rec = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/"+ n +"/"+ n +".json";
-            var REC = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/"+ n +"/"+ n + ".json";
-                   console.log(REC);
-                   console.log(rec);
+            var requestNome = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/"+ idProfessor +"/"+ idProfessor +".json";
+            var requestName = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/"+ idProfessor +"/"+ idProfessor + ".json";
 
-                  $http.get(REC)
+            var requestImagem = "http://10.101.0.251:8085/Lattes1/json/buscaLattes/"+ idProfessor +"/"+ idProfessor +".gif";
+          var requestPicture = "http://200.129.176.42:8085/Lattes1/json/buscaLattes/"+ idProfessor +"/"+ idProfessor +".gif";
+
+            $http.get(requestName,requestPicture)
                     .success(function (data)
                     {
-                          $scope.selectedNome = data;
+                        $scope.selected = data;
+                        $scope.picProfessor = requestPicture;
                     })
                     .error(function(erro)
                     {
-                      $http.get(rec)
+                      $http.get(requestNome,requestImagem)
                         .success(function (data)
                         {
-                          $scope.selectedNome = data;
+                            $scope.selected = data;
+                            $scope.picProfessor = requestImagem;
                         });
                     });
+                    console.log(requestNome);
+                    console.log(requestName);
           };
 
   $scope.$on('$ionicView.enter', function()

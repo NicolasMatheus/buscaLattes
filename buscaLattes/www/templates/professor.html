@@ -1,37 +1,25 @@
 <ion-view view-title="Professor">
   <ion-content>
-    <div class="card">
-      <div class="item item-icon-left">
-        <h2><center>{{k}}</center></h2>
-        <i class="icon ion-happy"></i>
-      </div>
+    <div class="list card">
+        <div class="item item-avatar">
+            <img ng-src="{{picProfessor}}" alt="Imagem do professor">
+            <h2>{{nomeProfessor}}</h2>
+        </div>
+        <div class="item item-body">
+        </div>
     </div>
-    <ion-list>
-        {{ob.artigo}}
-      <ion-checkbox ng-model="test">Produção tecnica</ion-checkbox>
-      <ion-checkbox ng-model="test2">Participação em eventos</ion-checkbox>
-    </ion-list>
-    <div class="list">
-		<div ng-show="test">
-			<div class="item item-divider">
-				<h2>Produção tecnica</h2>
-			</div>
-				<p class="item"
-					ng-repeat="ob in selectedNome | orderBy: ' artigo '">
-          			{{ob.artigo}}
-				</p>
-		</div>
-		<div ng-show="test2">
-			<div class="item item-divider">
-				<h2>Participação em eventos</h2>
-			</div>
-				<p class="item"
-				ng-repeat="ob in selectedNome | orderBy: ['evente','publicadao','conferencia']">
-         			{{ob.evento}}
-          			{{ob.publicadao}}
-          			{{ob.conferencia}}
-				</p>
-		</div>
-    </div>
+    <ion-item ng-repeat="dados in selected">
+        <p>
+            {{
+                dados
+                    .CURRICULO_VITAE
+                    .DADOS_GERAIS
+                    .ENDERECO
+                    .ENDERECO_PROFISSIONAL
+                    ._CODIGO_INSTITUICAO_EMPRESA
+            }}
+        </p>
+    </ion-item>
+
   </ion-content>
 </ion-view>
