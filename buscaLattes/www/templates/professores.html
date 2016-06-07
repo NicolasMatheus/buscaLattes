@@ -4,7 +4,7 @@
       <ion-item class="item item-avatar" ng-repeat="things in prof | orderBy : 'nome'"
           ui-sref="app.single({id : things.id, nome : things.nome, pic : things.img})">
 		  <!--
-		  TODO: Alterar o things.img1 para things.img e vice e versa
+		    TODO: Alterar o things.img1 para things.img e vice e versa
 		  -->
           <img ng-src="{{things.img}}" alt="imagem dos professores">
          <h2>{{things.nome}}</h2>
