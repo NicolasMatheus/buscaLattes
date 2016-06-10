@@ -1,0 +1,164 @@
+<ion-view view-title="Dados gerais">
+	<ion-content>
+  		<ion-list ng-repeat="dg in select"> 
+			<ion-item>
+				<b>RESUMO CURRICULO VITAE</b>
+			</ion-item>
+			<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.RESUMO_CV._TEXTO_RESUMO_CV_RH}}</p>
+			<ion-item>
+				<b>RESUMO CURRICULO VITAE INGLES</b>
+			</ion-item>
+			<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.RESUMO_CV._TEXTO_RESUMO_CV_RH_EN}}</p>
+			<ion-item>
+				<b>OUTRAS INFORMAÇOES</b>
+			</ion-item>
+			<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.OUTRAS_INFORMACOES_RELEVANTES._OUTRAS_INFORMACOES_RELEVANTES}}</p>
+			<ion-list>
+				<ion-item>
+					<b>ENDEREÇO PROFICIONAL</b>
+				</ion-item>
+				<ion-list>
+					<p>
+						<b>Codigo instituição-empresa:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CODIGO_INSTITUICAO_EMPRESA}}
+					</p>
+					<p>
+						<b>Nome instituição-empresa:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._NOME_INSTITUICAO_EMPRESA}}
+					</p>
+					<p>
+						<b>Codigo orgão:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CODIGO_ORGAO}}
+					</p>
+					<p>
+						<b>Nome orgão:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._NOME_ORGAO}}
+					</p>
+					<p>
+						<b>Codigo unidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CODIGO_UNIDADE}}
+					</p>
+					<p>
+						<b>Nome unidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._NOME_UNIDADE}}
+					</p>
+					<p>
+						<b>Logradouro:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._LOGRADOURO_COMPLEMENTO}}
+					</p>
+					<p>
+						<b>Pais:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._PAIS}}
+					</p>
+					<p>
+						<b>UF:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._UF}}
+					</p>
+					<p>
+						<b>CEP:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CEP}}
+					</p>
+					<p>
+						<b>Cidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CIDADE}}
+					</p>
+					<p>
+						<b>Bairro:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._BAIRRO}}
+					</p>
+					<p>
+						<b>DDD:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._DDD}}
+					</p>
+					<p>
+						<b>Telefone:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._TELEFONE}}
+					</p>
+					<p>
+						<b>Ramal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._RAMAL}}
+					</p>
+					<p>
+						<b>Fax:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._FAX}}
+					</p>
+					<p>
+						<b>Caixa postal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CAIXA_POSTAL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._E_MAIL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._HOME_PAGE}}
+					</p>
+				</ion-list> 
+			</ion-list>
+			<ion-list>
+				<ion-item>
+					<b>ENDEREÇO RESIDENCIAL</b>
+				</ion-item>
+				<ion-list>
+					<p>
+						<b>Logradouro:</b>
+						{{dg.CURRICUlO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_RESIDENCIAL._LOGRADOURO}}
+					</p>
+					<p>
+						<b>Pais:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._PAIS}}
+					</p>
+					<p>
+						<b>UF:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._UF}}
+					</p>
+					<p>
+						<b>CEP:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CEP}}
+					</p>
+					<p>
+						<b>Cidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CIDADE}}
+					</p>
+					<p>
+						<b>Bairro:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._BAIRRO}}
+					</p>
+					<p>
+						<b>DDD:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._DDD}}
+					</p>
+					<p>
+						<b>Telefone:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._TELEFONE}}
+					</p>
+					<p>
+						<b>Ramal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._RAMAL}}
+					</p>
+					<p>
+						<b>Fax:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._FAX}}
+					</p>
+					<p>
+						<b>Caixa postal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.	ENDERECO_PROFISSIONAL._CAIXA_POSTAL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._E_MAIL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._HOME_PAGE}}
+					</p>
+				</ion-list>
+			</ion-list>
+			<p>
+				<b>FLAG DE PREFERENCIA:</b>
+				{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO._FLAG_DE_PREFERENCIA}}
+			</p>
+		</ion-list>
+  	</ion-content>
+</ion-view>
