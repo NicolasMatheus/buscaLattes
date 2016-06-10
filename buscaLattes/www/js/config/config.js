@@ -46,6 +46,42 @@ angular.module('lattes.config', [])
             }
         }
     })
+    .state('app.esquema', {
+        url: '/esquema',
+        views: {
+            'menuContent':{
+                templateUrl: 'templates/esquema.html',
+                controller: 'CurriculoCtrl'
+            }
+        }
+    })
+    .state('app.dg', {
+        url: '/dadosgerais',
+        views: {
+            'menuContent':{
+                templateUrl: 'templates/dadosgerais.html',
+                controller: 'CurriculoCtrl'
+            }
+        }
+    })
+    .state('app.fat', {
+        url: '/formacaoacademica',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/formacaoacademica.html',
+                controller: 'CurriculoCtrl'
+            }
+        }
+    })
+    .state('app.ap', {
+        url: '/atucoesprofissionais',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/atuacoesprofissionais.html',
+                controller: 'CurriculoCtrl'
+            }
+        }
+    })
     .state('app.single', {
         url: '/professores/:id/:nome',
         views: {
