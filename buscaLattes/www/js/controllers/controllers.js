@@ -48,23 +48,19 @@ angular.module('lattes.controllers', [])
     });
 })
 .controller('CurriculoCtrl', function($scope, $http, $stateParams, Salve) {
-    
-    $scope.choice = true;
-    $scope.esquema = Salve.idProfessor;
-    
-    const requestName = Salve.requestName;
-    const requestNome = Salve.requestNome;
+    $scope.$on('$ionicView.enter', function() { 
+        $scope.choice = true;
+        $scope.esquema = Salve.idProfessor;
+        
+        const requestName = Salve.requestName;
+        const requestNome = Salve.requestNome;
 
-    console.log('Request Nome: ' + requestNome);
-    console.log('Request Name: ' + requestName);
+        console.log('Request Nome: ' + requestNome);
+        console.log('Request Name: ' + requestName);
 
-    $http.get(requestName, requestNome)
-        .success(function(data) {
-            $scope.select = data;
-    });
-
- // $scope.$on('$ionicView.enter', function() {
-     // $scope.esquema = Salve.dados;
-     // console.log(Salve.dados);
-  // }); 
+        $http.get(requestName, requestNome)
+            .success(function(data) {
+                $scope.select = data;
+        });
+    }); 
 });
