@@ -46,15 +46,6 @@ angular.module('lattes.config', [])
             }
         }
     })
-    .state('app.esquema', {
-        url: '/esquema',
-        views: {
-            'menuContent':{
-                templateUrl: 'templates/esquema.html',
-                controller: 'CurriculoCtrl'
-            }
-        }
-    })
     .state('app.dg', {
         url: '/dadosgerais',
         views: {
