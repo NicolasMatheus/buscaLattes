@@ -1,0 +1,12 @@
+<ion-view view-title="Produção bibliografica">
+	<ion-content>
+		<ion-list ng-repeat="pb in dadosCurriculo">
+			I have {{pb.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.TRABALHOS_EM_EVENTOS.TRABALHO_EM_EVENTOS.length}}
+			<p>{{pb.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.TRABALHOS_EM_EVENTOS.TRABALHO_EM_EVENTOS[$index].DADOS_BASICOS_DO_TRABALHO._TITULO_DO_TRABALHO}}</p>
+
+			<ion-list ng-repeat="teste in nameArr">
+				{{teste.DADOS_BASICOS_DO_TRABALHO._TITULO_DO_TRABALHO}}
+			</ion-list>
+		</ion-list>	
+	</ion-content>
+</ion-view>

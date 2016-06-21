@@ -1,0 +1,243 @@
+<ion-view view-title="Dados gerais">
+	<ion-content>
+  		<ion-list ng-repeat="dg in dadosCurriculo"> 
+			<ion-item ng-click="dg.id_1 = !dg.id_1">
+				DADOS GERIAS
+			</ion-item>
+  			<ion-list ng-show="dg.id_1">
+				<p>
+					<b>Nome completo:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._NOME_COMPLETO}}
+				</p>
+				<p>
+					<b>Sexo:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._SEXO}}
+				</p>
+				<p>
+					<b>Raça ou Cor:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._RACA_OU_COR}}
+				</p>
+				<p>
+					<b>Nome em citaçoes bibliograficas:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._NOME_EM_CITACOES_BIBLIOGRAFICAS}}
+				</p>
+				<p>
+					<b>Idioma:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[0]._DESCRICAO_DO_IDIOMA}}
+					<p><b>Leitura:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[0]._PROFICIENCIA_DE_LEITURA}}</p>
+					<p><b>Fala:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[0]._PROFICIENCIA_DE_FALA}}</p>
+					<p><b>Escrita:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[0]._PROFICIENCIA_DE_ESCRITA}}</p>
+					<p><b>Compreensão:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[0]._PROFICIENCIA_DE_COMPREENSAO}}</p>
+				</p>
+				<p>
+					<b>Idioma:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[1]._DESCRICAO_DO_IDIOMA}}
+					<p><b>Leitura:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[1]._PROFICIENCIA_DE_LEITURA}}</p>
+					<p><b>Fala:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[1]._PROFICIENCIA_DE_FALA}}</p>
+					<p><b>Escrita:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[1]._PROFICIENCIA_DE_ESCRITA}}</p>
+					<p><b>Compreensão:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[1]._PROFICIENCIA_DE_COMPREENSAO}}</p>
+				</p>
+				<p>
+					<b>Idioma:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[2]._DESCRICAO_DO_IDIOMA}}
+					<p><b>Leitura:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[2]._PROFICIENCIA_DE_LEITURA}}</p>
+					<p><b>Fala:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[2]._PROFICIENCIA_DE_FALA}}</p>
+					<p><b>Escrita:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[2]._PROFICIENCIA_DE_ESCRITA}}</p>
+					<p><b>Compreensão:</b>{{dg.CURRICULO_VITAE.DADOS_GERAIS.IDIOMAS.IDIOMA[2]._PROFICIENCIA_DE_COMPREENSAO}}</p>
+				</p>
+				<p>
+					<b>Nome do pai:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._NOME_DO_PAI}}
+				</p>
+				<p>
+					<b>Nome da mãe:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._NOME_DA_MAE}}
+				</p>
+				<p>
+					<b>Nacionalidade:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._NACIONALIDADE}}
+				</p>
+				<p>
+					<b>Pais de nascimento:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._PAIS_DE_NASCIMENTO}}
+				</p>
+				<p>
+					<b>Uf nascimento:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._UF_NASCIMENTO}}
+				</p>
+				<p>
+					<b>Cidade nascimento:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._CIDADE_NASCIMENTO}}
+				</p>
+				<p>
+					<b>Sigla pais de nascimento:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._SIGLA_PAIS_NACIONALIDADE}}
+				</p>
+				<p>
+					<b>Pais de nascimento:</b>
+					{{dg.CURRICULO_VITAE.DADOS_GERAIS._PAIS_DE_NACIONALIDADE}}
+				</p>
+			</ion-list>
+			<ion-item ng-click="dg.id_2 = !dg.id_2">
+				RESUMO CURRICULO VITAE
+			</ion-item>
+  			<ion-list ng-show="dg.id_2">
+				<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.RESUMO_CV._TEXTO_RESUMO_CV_RH}}</p>
+				<ion-item>
+					<b>RESUMO CURRICULO VITAE INGLES</b>
+				</ion-item>
+				<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.RESUMO_CV._TEXTO_RESUMO_CV_RH_EN}}</p>
+				<ion-item>
+					<b>OUTRAS INFORMAÇOES</b>
+				</ion-item>
+				<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.OUTRAS_INFORMACOES_RELEVANTES._OUTRAS_INFORMACOES_RELEVANTES}}</p>
+			</ion-list>
+			<ion-item ng-click="dg.id_3 = !dg.id_3">
+				ENDEREÇO PROFICIONAL
+			</ion-item>
+			<ion-list ng-show="dg.id_3">
+				<ion-list>
+					<p>
+						<b>Codigo instituição-empresa:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CODIGO_INSTITUICAO_EMPRESA}}
+					</p>
+					<p>
+						<b>Nome instituição-empresa:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._NOME_INSTITUICAO_EMPRESA}}
+					</p>
+					<p>
+						<b>Codigo orgão:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CODIGO_ORGAO}}
+					</p>
+					<p>
+						<b>Nome orgão:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._NOME_ORGAO}}
+					</p>
+					<p>
+						<b>Codigo unidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CODIGO_UNIDADE}}
+					</p>
+					<p>
+						<b>Nome unidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._NOME_UNIDADE}}
+					</p>
+					<p>
+						<b>Logradouro:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._LOGRADOURO_COMPLEMENTO}}
+					</p>
+					<p>
+						<b>Pais:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._PAIS}}
+					</p>
+					<p>
+						<b>UF:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._UF}}
+					</p>
+					<p>
+						<b>CEP:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CEP}}
+					</p>
+					<p>
+						<b>Cidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CIDADE}}
+					</p>
+					<p>
+						<b>Bairro:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._BAIRRO}}
+					</p>
+					<p>
+						<b>DDD:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._DDD}}
+					</p>
+					<p>
+						<b>Telefone:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._TELEFONE}}
+					</p>
+					<p>
+						<b>Ramal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._RAMAL}}
+					</p>
+					<p>
+						<b>Fax:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._FAX}}
+					</p>
+					<p>
+						<b>Caixa postal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CAIXA_POSTAL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._E_MAIL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._HOME_PAGE}}
+					</p>
+				</ion-list> 
+			</ion-list>
+			<ion-item ng-click="dg.id_4 = !dg.id_4">
+				ENDEREÇO RESIDENCIAL
+			</ion-item>
+			<ion-list ng-show="dg.id_4">
+				<ion-list>
+					<p>
+						<b>Logradouro:</b>
+						{{dg.CURRICUlO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_RESIDENCIAL._LOGRADOURO}}
+					</p>
+					<p>
+						<b>Pais:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._PAIS}}
+					</p>
+					<p>
+						<b>UF:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._UF}}
+					</p>
+					<p>
+						<b>CEP:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CEP}}
+					</p>
+					<p>
+						<b>Cidade:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._CIDADE}}
+					</p>
+					<p>
+						<b>Bairro:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._BAIRRO}}
+					</p>
+					<p>
+						<b>DDD:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._DDD}}
+					</p>
+					<p>
+						<b>Telefone:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._TELEFONE}}
+					</p>
+					<p>
+						<b>Ramal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._RAMAL}}
+					</p>
+					<p>
+						<b>Fax:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._FAX}}
+					</p>
+					<p>
+						<b>Caixa postal:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.	ENDERECO_PROFISSIONAL._CAIXA_POSTAL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._E_MAIL}}
+					</p>
+					<p>
+						<b>Email:</b>
+						{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO.ENDERECO_PROFISSIONAL._HOME_PAGE}}
+					</p>
+				</ion-list>
+			</ion-list>
+			<p>
+				<b>FLAG DE PREFERENCIA:</b>
+				{{dg.CURRICULO_VITAE.DADOS_GERAIS.ENDERECO._FLAG_DE_PREFERENCIA}}
+			</p>
+		</ion-list>
+  	</ion-content>
+</ion-view>

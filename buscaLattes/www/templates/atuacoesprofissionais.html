@@ -1,0 +1,40 @@
+<ion-view view-title="Atuaçoes Profissionais">
+	<ion-content>
+    	<ion-list ng-repeat="ap in dadosCurriculo">
+    		<ion-list>
+    			<ion-item>ATUAÇÕES PROFISSIONAIS</ion-item>
+    			<ion-list>
+					<ion-item>
+    					<b>Tipo de vinculo: </b>
+    					{{ap.CURRICULO_VITAE.DADOS_GERAIS.ATUACOES_PROFISSIONAIS.ATUACAO_PROFISSIONAL[0].VINCULOS[0]._TIPO_DE_VINCULO}}
+    				</ion-item>
+    				<p>
+    					<b>Outras informações: </b>
+    					{{ap.CURRICULO_VITAE.DADOS_GERAIS.ATUACOES_PROFISSIONAIS.ATUACAO_PROFISSIONAL[0].VINCULOS[0]._OUTRAS_INFORMACOES}}
+    				</p>
+    			</ion-list>
+    			<ion-list>
+					<ion-item>
+    					<b>Tipo de vinculo: </b>
+    					{{ap.CURRICULO_VITAE.DADOS_GERAIS.ATUACOES_PROFISSIONAIS.ATUACAO_PROFISSIONAL[1].VINCULOS._TIPO_DE_VINCULO}}
+    				</ion-item>
+					<p>
+						<b>Outras informações: </b>
+						{{ap.CURRICULO_VITAE.DADOS_GERAIS.ATUACOES_PROFISSIONAIS.ATUACAO_PROFISSIONAL[1].VINCULOS._OUTRAS_INFORMACOES}}
+					</p>
+    			</ion-list>
+    			<ion-list>
+					<ion-item>
+    					<b>Tipo de vinculo: </b>
+    					{{ap.CURRICULO_VITAE.DADOS_GERAIS.ATUACOES_PROFISSIONAIS.ATUACAO_PROFISSIONAL[2].VINCULOS._TIPO_DE_VINCULO}}
+    					<b>Nicolas</b>
+    				</ion-item>
+    				<p>
+    					<b>Outras informações: </b>
+    					{{ap.CURRICULO_VITAE.DADOS_GERAIS.ATUACOES_PROFISSIONAIS.ATUACAO_PROFISSIONAL[2].VINCULOS._OUTRAS_INFORMACOES}}
+    				</p>
+    			</ion-list>
+    		</ion-list>
+    	</ion-list>
+  	</ion-content>
+</ion-view>
