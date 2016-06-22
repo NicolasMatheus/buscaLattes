@@ -7,11 +7,11 @@
             <center>
                 <label>
                     <p>Digite uma formação academica <br>
-                    <span>(graduacao, mestrado, doutorado, posdoc)</span></p>
+                    <span>(Graduacao, Mestrado, Doutorado, Posdoc)</span></p>
                 </label>
                 <input type="text" ng-model="formacao" placeholder="Digite aqui !">
             </center>
-            <ion-list ng-show="formacao == 'graduacao'">
+            <ion-list ng-show="formacao == 'Graduacao'">
                 <ion-item>
                     <b>GRADUAÇÃO</b>
                 </ion-item>
@@ -126,7 +126,7 @@
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_ORIENTADOR_GRAD}}
                 </p> 
             </ion-list>
-            <ion-list ng-show="formacao == 'mestrado'"> 
+            <ion-list ng-show="formacao == 'Mestrado'"> 
                 <ion-item>
                     <b>MESTRADO</b>
                 </ion-item>
@@ -283,7 +283,7 @@
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_ORIENTADOR_DOUT}}
                 </p>
             </ion-list>
-            <ion-list ng-show="formacao == 'doutorado'">
+            <ion-list ng-show="formacao == 'Doutorado'">
                 <ion-item>
                     <b>DOUTORADO</b>
                 </ion-item>
@@ -472,7 +472,7 @@
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_CO_ORIENTADOR}}
                 </p> 
             </ion-list>
-            <ion-list ng-show="formacao == 'posdoc'"> 
+            <ion-list ng-show="formacao == 'Posdoc'"> 
                 <ion-item>
                     <b>POS-DOUTORADO</b>
                 </ion-item>
