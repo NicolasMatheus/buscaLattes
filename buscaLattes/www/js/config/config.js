@@ -9,7 +9,7 @@ angular.module('lattes.config', [])
   $httpProvider.defaults.headers.common["Accept"] = "application/json";
   $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
 })
- appropriate CORS headers globally */
+ appropriate CORS headers globally*/
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -47,29 +47,47 @@ angular.module('lattes.config', [])
         }
     })
     .state('app.dg', {
-        url: '/dadosgerais',
-        views: {
-            'menuContent':{
-                templateUrl: 'templates/dadosgerais.html',
-                controller: 'CurriculoCtrl'
-            }
-        }
+    	url : '/dadosgerais',
+    	views : {
+    		'menuContent' : {
+    			templateUrl : 'templates/dadosgerais.html',
+    			controller : 'DadosCtrl'
+    		}
+    	}
     })
-    .state('app.fat', {
-        url: '/formacaoacademica',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/formacaoacademica.html',
-                controller: 'CurriculoCtrl'
-            }
-        }
+    .state('app.fa', {
+    	url : '/formacaoacademica',
+    	views : {
+    		'menuContent' : {
+    			templateUrl : 'templates/formacaoacademica.html',
+    			controller : 'DadosCtrl'
+    		}
+    	}
     })
     .state('app.ap', {
-        url: '/atucoesprofissionais',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/atuacoesprofissionais.html',
-                controller: 'CurriculoCtrl'
+    	url : '/atuacoesproficionais',
+    	views : {
+    		'menuContent' : {
+    			templateUrl : 'templates/atuacoesprofissionais.html',
+    			controller : 'DadosCtrl'
+    		}
+    	}
+    })
+    .state('app.at', {
+        url : '/areadeatuacao',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/areadeatuacao.html',
+                controller : 'DadosCtrl'
+            }
+        }
+    })
+    .state('app.pb', {
+        url : '/producaobibiografica',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/producaobibliografica.html',
+                controller : 'DadosCtrl'
             }
         }
     })

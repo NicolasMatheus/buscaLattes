@@ -1,0 +1,17 @@
+<ion-view view-title="Produção bibliografica">
+	<ion-content>
+		<ion-list ng-repeat="pb in dadosCurriculo">
+			<ion-list ng-repeat="_pb in pb.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.TRABALHOS_EM_EVENTOS.TRABALHO_EM_EVENTOS">
+					{{_pb.DADOS_BASICOS_DO_TRABALHO._TITULO_DO_TRABALHO}} <br>
+					{{_pb.DADOS_BASICOS_DO_TRABALHO._ANO_DO_TRABALHO}} <br>
+					{{_pb.DADOS_BASICOS_DO_TRABALHO._NATUREZA}} <br>
+					<ion-list ng-repeat="__pb in _pb.AUTORES"> <br>
+						C:{{__pb._NOME_COMPLETO_DO_AUTOR}}
+					</ion-list> <br>
+					{{_pb._SEQUENCIA_PRODUCAO}}
+					A:{{_pb.DETALHAMENTO_DO_TRABALHO._TITULO_DOS_ANAIS_OU_PROCEEDINGS}} <br>
+					B:{{_pb.DETALHAMENTO_DO_TRABALHO._ANO_DE_REALIZACAO}} <br>
+			</ion-list>
+		</ion-list>	
+	</ion-content>
+</ion-view>

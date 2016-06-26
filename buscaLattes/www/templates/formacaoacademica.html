@@ -1,13 +1,20 @@
 <ion-view view-title="Formação Academica">
     <ion-content>
-        <ion-list ng-repeat="fat in select">
+        <ion-list ng-repeat="fat in dadosCurriculo">
             <ion-item>
                 <b>FORMAÇÃO ACADEMICA TITULAÇÃO</b>
             </ion-item>
-            <ion-list>
-                <h5>
+            <center>
+                <label>
+                    <p>Digite uma formação academica <br>
+                    <span>(Graduacao, Mestrado, Doutorado, Posdoc)</span></p>
+                </label>
+                <input type="text" ng-model="formacao" placeholder="Digite aqui !">
+            </center>
+            <ion-list ng-show="formacao == 'Graduacao'">
+                <ion-item>
                     <b>GRADUAÇÃO</b>
-                </h5>
+                </ion-item>
                 <p>
                     <b>Sequencia formação:</b>
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._SEQUENCIA_FORMACAO}}
@@ -119,11 +126,10 @@
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_ORIENTADOR_GRAD}}
                 </p> 
             </ion-list>
-            <hr>
-            <ion-list> 
-                <h5>
+            <ion-list ng-show="formacao == 'Mestrado'"> 
+                <ion-item>
                     <b>MESTRADO</b>
-                </h5>
+                </ion-item>
                 <p>
                     <b>Palavra chave:</b> 
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_1}}
@@ -277,11 +283,10 @@
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_ORIENTADOR_DOUT}}
                 </p>
             </ion-list>
-            <hr>
-            <ion-list>
-                <h5>
+            <ion-list ng-show="formacao == 'Doutorado'">
+                <ion-item>
                     <b>DOUTORADO</b>
-                </h5>
+                </ion-item>
                 <p>
                     <b>Palavra chave:</b>
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_1}}
@@ -467,11 +472,10 @@
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_CO_ORIENTADOR}}
                 </p> 
             </ion-list>
-            <hr>
-            <ion-list> 
-                <h5>
+            <ion-list ng-show="formacao == 'Posdoc'"> 
+                <ion-item>
                     <b>POS-DOUTORADO</b>
-                </h5>
+                </ion-item>
                 <p>
                     <b>Nome grande area do conhecimento:</b>
                     {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}}

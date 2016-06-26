@@ -1,0 +1,23 @@
+<ion-view view-title="Area de Atuação">
+	<ion-content>
+		<ion-list ng-repeat="at in dadosCurriculo">
+			<ion-item>AREA DE ATUAÇÃO</ion-item>
+			<ion-list ng-repeat="_at in at.CURRICULO_VITAE.DADOS_GERAIS.AREAS_DE_ATUACAO.AREA_DE_ATUACAO">
+					<div class="card">
+						<p>	
+							<b>Nome grande area do conhecimento: </b>
+							{{_at._NOME_GRANDE_AREA_DO_CONHECIMENTO}}
+						</p>
+						<p>
+							<b>Nome da area do conhecimento: </b>
+							{{_at._NOME_DA_AREA_DO_CONHECIMENTO}}
+						</p>
+						<p>
+							<b>Nome da sub area do conhecimento: </b>
+							{{_at._NOME_DA_SUB_AREA_DO_CONHECIMENTO}}
+						</p>
+					</div>
+			</ion-list>
+		</ion-list>
+	</ion-content>
+</ion-view>
