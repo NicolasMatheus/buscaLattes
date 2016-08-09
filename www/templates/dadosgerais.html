@@ -1,10 +1,10 @@
 <ion-view view-title="Dados gerais">
 	<ion-content>
   		<ion-list ng-repeat="dg in dadosCurriculo"> 
-			<ion-item ng-click="dg.id_1 = !dg.id_1">
+			<ion-item ng-click="id.id_1 = !id.id_1">
 				DADOS GERIAS
 			</ion-item>
-  			<ion-list ng-show="dg.id_1">
+  			<ion-list ng-show="id.id_1">
 				<p>
 					<b>Nome completo:</b>
 					{{dg.CURRICULO_VITAE.DADOS_GERAIS._NOME_COMPLETO}}
@@ -78,10 +78,10 @@
 					{{dg.CURRICULO_VITAE.DADOS_GERAIS._PAIS_DE_NACIONALIDADE}}
 				</p>
 			</ion-list>
-			<ion-item ng-click="dg.id_2 = !dg.id_2">
+			<ion-item ng-click="id.id_2 = !id.id_2">
 				RESUMO CURRICULO VITAE
 			</ion-item>
-  			<ion-list ng-show="dg.id_2">
+  			<ion-list ng-show="id.id_2">
 				<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.RESUMO_CV._TEXTO_RESUMO_CV_RH}}</p>
 				<ion-item>
 					<b>RESUMO CURRICULO VITAE INGLES</b>
@@ -92,10 +92,10 @@
 				</ion-item>
 				<p>{{dg.CURRICULO_VITAE.DADOS_GERAIS.OUTRAS_INFORMACOES_RELEVANTES._OUTRAS_INFORMACOES_RELEVANTES}}</p>
 			</ion-list>
-			<ion-item ng-click="dg.id_3 = !dg.id_3">
+			<ion-item ng-click="id.id_3 = !id.id_3">
 				ENDEREÇO PROFISSIONAL
 			</ion-item>
-			<ion-list ng-show="dg.id_3">
+			<ion-list ng-show="id.id_3">
 				<ion-list>
 					<p>
 						<b>Codigo instituição-empresa:</b>
@@ -175,10 +175,10 @@
 					</p>
 				</ion-list> 
 			</ion-list>
-			<ion-item ng-click="dg.id_4 = !dg.id_4">
+			<ion-item ng-click="id.id_4 = !id.id_4">
 				ENDEREÇO RESIDENCIAL
 			</ion-item>
-			<ion-list ng-show="dg.id_4">
+			<ion-list ng-show="id.id_4">
 				<ion-list>
 					<p>
 						<b>Logradouro:</b>
