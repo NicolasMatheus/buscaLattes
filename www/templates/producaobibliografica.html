@@ -1,17 +1,179 @@
 <ion-view view-title="Produção bibliografica">
 	<ion-content>
 		<ion-list ng-repeat="pb in dadosCurriculo">
-			<ion-list ng-repeat="_pb in pb.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.TRABALHOS_EM_EVENTOS.TRABALHO_EM_EVENTOS">
-					{{_pb.DADOS_BASICOS_DO_TRABALHO._TITULO_DO_TRABALHO}} <br>
-					{{_pb.DADOS_BASICOS_DO_TRABALHO._ANO_DO_TRABALHO}} <br>
-					{{_pb.DADOS_BASICOS_DO_TRABALHO._NATUREZA}} <br>
-					<ion-list ng-repeat="__pb in _pb.AUTORES"> <br>
-						C:{{__pb._NOME_COMPLETO_DO_AUTOR}}
-					</ion-list> <br>
+			<ion-item ng-click="id.id_1 = !id.id_1">
+				TRABALHO EM EVENTOS
+			</ion-item>
+			<ion-list ng-show="id.id_1"
+				ng-repeat="_pb in pb.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.TRABALHOS_EM_EVENTOS.TRABALHO_EM_EVENTOS">
+				<div class="card">
+					<ion-list>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._NATUREZA}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._TITULO_DO_TRABALHO}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._ANO_DO_TRABALHO}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._PAIS_DO_EVENTO}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._IDIOMA}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._MEIO_DE_DIVULGACAO}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._HOME_PAGE_DO_TRABALHO}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._FLAG_RELEVANCIA}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._DOI}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._TITULO_DO_TRABALHO_INGLES}} <br>
+						{{_pb.DADOS_BASICOS_DO_TRABALHO._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+					</ion-list>
+					<ion-list>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._CLASSIFICACAO_DO_EVENTO}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._NOME_DO_EVENTO}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._CIDADE_DO_EVENTO}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._ANO_DE_REALIZACAO}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._TITULO_DOS_ANAIS_OU_PROCEEDINGS}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._VOLUME}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._FASCICULO}} <br>
+						{{_pb.DETALHEMENTO_DO_TRABALHO._SERIE}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._PAGINA_INICIAL}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._PAGINA_FINAL}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._ISBN}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._NOME_DA_EDITORA}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._CIDADE_DA_EDITORA}} <br>
+						{{_pb.DETALHAMENTO_DO_TRABALHO._NOME_DO_EVENTO_INGLES}} <br>
+					</ion-list>
+					<ion-list ng-repeat="_pb_ in _pb.AUTORES">
+						{{_pb_._NOME_COMPLETO_DO_AUTOR}} <br>
+						{{_pb_._NOME_PARA_CITACAO}} <br>
+						{{_pb_._ORDEM_DE_AUTORIA}} <br>
+						{{_pb_._NRO_ID_CNPQ}} <br>
+					</ion-list>
 					{{_pb._SEQUENCIA_PRODUCAO}}
-					A:{{_pb.DETALHAMENTO_DO_TRABALHO._TITULO_DOS_ANAIS_OU_PROCEEDINGS}} <br>
-					B:{{_pb.DETALHAMENTO_DO_TRABALHO._ANO_DE_REALIZACAO}} <br>
+				</div>
 			</ion-list>
-		</ion-list>	
+		</ion-list>
+		<ion-list ng-repeat="pb_um in dadosCurriculo">
+			<ion-item ng-click="id.id_2 = !id.id_2">
+				ARTIGOS PUBLICADOS
+			</ion-item>
+			<ion-list ng-show="id.id_2"
+				ng-repeat="_pb_um in pb_um.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.ARTIGOS_PUBLICADOS.ARTIGO_PUBLICADO">
+				<div class="card">
+					<ion-list>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._NATUREZA}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._ANO_DO_ARTIGO}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._PAIS_DE_PUBLICACAO}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._IDIOMA}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._MEIO_DE_DIVULGACAO}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._HOME_PAGE_DO_TRABALHO}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._FLAG_RELEVANCIA}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._DOI}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO_INGLES}} <br>
+						{{_pb_um.DADOS_BASICOS_DO_ARTIGO._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+					</ion-list>
+					<ion-list>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._TITULO_DO_PERIODICO_OU_REVISTA}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._ISSN}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._VOLUME}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._FASCICULO}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._SERIE}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._PAGINA_INICIAL}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._PAGINA_FINAL}} <br>
+						{{_pb_um.DETALHAMENTO_DO_ARTIGO._LOCAL_DE_PUBLICACAO}} <br>
+					</ion-list>
+					<ion-list>
+						<ion-list ng-repeat="_pb_um_ in _pb_um.AUTORES">
+							{{_pb_um_._NOME_COMPLETO_DO_AUTOR}} <br>
+							{{_pb_um_._NOME_PARA_CITACAO}} <br>
+							{{_pb_um_._ORDEM_DE_AUTORIA}} <br>
+							{{_pb_um_._NRO_ID_CNPQ}} <br>
+						</ion-list>
+					</ion-list>
+					{{_pb_um._SEQUENCIA_PRODUCAO}} <br>
+					{{_pb_um._ORDEM_IMPORTANCIA}}
+				</div>
+			</ion-list>
+		</ion-list>
+		<ion-list ng-repeat="pb_dois in dadosCurriculo">
+			<ion-item ng-click="id.id_3 = !id.id_3">
+				LIVROS E CAPITULOS
+			</ion-item>
+			<ion-list ng-show="id.id_3"
+				ng-repeat="_pb_dois in pb_dois.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.LIVROS_E_CAPITULOS.CAPITULOS_DE_LIVROS_PUBLICADOS.CAPITULO_DE_LIVRO_PUBLICADO">
+				<div class="card">
+					<ion-list>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TIPO}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TITULO_DO_CAPITULO_DO_LIVRO}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._ANO}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._PAIS_DE_PUBLICACAO}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._IDIOMA}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._MEIO_DE_DIVULGACAO}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._HOME_PAGE_DO_TRABALHO}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._FLAG_RELEVANCIA}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._DOI}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TITULO_DO_CAPITULO_DO_LIVRO_INGLES}} <br>
+						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+					</ion-list>
+					<ion-list>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._TITULO_DO_LIVRO}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DE_VOLUMES}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._PAGINA_INICIAL}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._PAGINA_FINAL}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._ISBN}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._ORGANIZADORES}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DA_EDICAO_REVISAO}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DA_SERIE}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._CIDADE_DA_EDITORA}} <br>
+						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NOME_DA_EDITORA}} <br>
+					</ion-list>
+					<ion-list>
+						<ion-list ng-repeat="_pb_dois_ in _pb_dois.AUTORES">
+							{{_pb_dois_._NOME_COMPLETO_DO_AUTOR}} <br>
+							{{_pb_dois_._NOME_PARA_CITACAO}} <br>
+							{{_pb_dois_._ORDEM_DE_AUTORIA}} <br>
+							{{_pb_dois_._NRO_ID_CNPQ}} <br>
+						</ion-list>
+					</ion-list>
+					{{_pb_dois._SEQUENCIA_PRODUCAO}}
+				</div>
+			</ion-list>
+		</ion-list>
+		<ion-list ng-repeat="pb_tres in dadosCurriculo">
+			<ion-item ng-click="id.id_4 = !id.id_4">
+				ARTIGOS ACEITOS PARA PUBLICAÇÃO
+			</ion-item>
+			<ion-list ng-show="id.id_4"
+				ng-repeat="_pb_tres in pb_tres.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.ARTIGOS_ACEITOS_PARA_PUBLICACAO.ARTIGO_ACEITO_PARA_PUBLICACAO">
+				<div class="card">
+					<ion-list>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._NATUREZA}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._ANO_DO_ARTIGO}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._PAIS_DE_PUBLICACAO}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._IDIOMA}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._MEIO_DE_DIVULGACAO}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._HOME_PAGE_DO_TRABALHO}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._FLAG_RELEVANCIA}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._DOI}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO_INGLES}} <br>
+						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+					</ion-list>
+					<ion-list>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._TITULO_DO_PERIODICO_OU_REVISTA}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._ISSN}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._VOLUME}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._FASCICULO}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._SERIE}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._PAGINA_INICIAL}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._PAGINA_FINAL}} <br>
+						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._LOCAL_DE_PUBLICACAO}} <br>
+					</ion-list>
+					<ion-list>
+						<ion-list ng-repeat="_pb_tres_ in _pb_tres.AUTORES">
+							{{_pb_tres_._NOME_COMPLETO_DO_AUTOR}} <br>
+							{{_pb_tres_._NOME_PARA_CITACAO}} <br>
+							{{_pb_tres_._ORDEM_DE_AUTORIA}} <br>
+							{{_pb_tres_._NRO_ID_CNPQ}} <br>
+						</ion-list>
+					</ion-list>
+					{{_pb_tres._SEQUENCIA_PRODUCAO}}
+				</div>
+			</ion-list>
+		</ion-list>
 	</ion-content>
 </ion-view>
