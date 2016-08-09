@@ -37,7 +37,12 @@ angular.module('lattes.controllers', [])
   });
 })
 .controller('DadosCtrl', function($scope, $http, $stateParams, DadosCurriculo) {
-  $scope.dg = {id_1 : false, id_2 : false, id_3 : false, id_4 : false};
+  $scope.id = {
+    id_1 : false,
+    id_2 : false,
+    id_3 : false,
+    id_4 : false
+  };
 	var requestNome = DadosCurriculo.requestNome;
 	var requestName = DadosCurriculo.requestName;
 	$http.get(requestName).success(function(data) {
