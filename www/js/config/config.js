@@ -91,6 +91,33 @@ angular.module('lattes.config', [])
             }
         }
     })
+    .state('app.pt', {
+        url : '/producaotecnica',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/producaotecnica.html',
+                controller : 'DadosCtrl',
+            }
+        }
+    })
+    .state('app.op', {
+        url : '/outrasproducao',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/outrasproducao.html',
+                controller : 'DadosCtrl',
+            }
+        }
+    })
+    .state('app.dc', {
+        url : '/dadoscomplementares',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/dadoscomplementares.html',
+                controller : 'DadosCtrl',
+            }
+        }
+    })
     .state('app.single', {
         url: '/professores/:id/:nome',
         views: {
