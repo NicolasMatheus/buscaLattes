@@ -41,7 +41,13 @@ angular.module('lattes.controllers', [])
     id_1 : false,
     id_2 : false,
     id_3 : false,
-    id_4 : false
+    id_4 : false,
+    id_5 : false,
+    id_6 : false,
+    id_7 : false,
+    id_8 : false,
+    id_9 : false,
+    id_10 : false
   };
 	var requestNome = DadosCurriculo.requestNome;
 	var requestName = DadosCurriculo.requestName;
