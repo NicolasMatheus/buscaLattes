@@ -92,91 +92,93 @@
 				</div>
 			</ion-list>
 		</ion-list>
-		<!--<ion-list ng-repeat="pb_dois in dadosCurriculo">
-			<ion-item ng-click="id.id_3 = !id.id_3">
-				LIVROS E CAPITULOS
-			</ion-item>
+		<ion-list ng-repeat="pb_dois in dadosCurriculo">
+			<ion-item ng-click="id.id_3 = !id.id_3">Livros e Capitulos</ion-item>
 			<ion-list ng-show="id.id_3"
 				ng-repeat="_pb_dois in pb_dois.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.LIVROS_E_CAPITULOS.CAPITULOS_DE_LIVROS_PUBLICADOS.CAPITULO_DE_LIVRO_PUBLICADO">
 				<div class="card">
 					<ion-list>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TIPO}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TITULO_DO_CAPITULO_DO_LIVRO}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._ANO}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._PAIS_DE_PUBLICACAO}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._IDIOMA}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._MEIO_DE_DIVULGACAO}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._HOME_PAGE_DO_TRABALHO}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._FLAG_RELEVANCIA}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._DOI}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TITULO_DO_CAPITULO_DO_LIVRO_INGLES}} <br>
-						{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+						<ion-item>Dados basicos do capitulo</ion-item>
+						<b>Titulo do capitulo do livro: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TITULO_DO_CAPITULO_DO_LIVRO}} <br>
+						<b>Tipo: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TIPO}} <br>
+						<b>Ano: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._ANO}} <br>
+						<b>Pais de publicação: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._PAIS_DE_PUBLICACAO}} <br>
+						<b>Idioma: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._IDIOMA}} <br>
+						<b>Meio de divulgação: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._MEIO_DE_DIVULGACAO}} <br>
+						<b>Home page do trabalho: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._HOME_PAGE_DO_TRABALHO}} <br>
+						<b>Flag de relevancia: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._FLAG_RELEVANCIA}} <br>
+						<b>DOI: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._DOI}} <br>
+						<b>Titulo do capitulo do livro em ingles: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._TITULO_DO_CAPITULO_DO_LIVRO_INGLES}} <br>
+						<b>Flag de divulgação cientifica: </b>{{_pb_dois.DADOS_BASICOS_DO_CAPITULO._FLAG_DIVULGACAO_CIENTIFICA}}
 					</ion-list>
-					<ion-list>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._TITULO_DO_LIVRO}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DE_VOLUMES}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._PAGINA_INICIAL}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._PAGINA_FINAL}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._ISBN}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._ORGANIZADORES}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DA_EDICAO_REVISAO}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DA_SERIE}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._CIDADE_DA_EDITORA}} <br>
-						{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NOME_DA_EDITORA}} <br>
+					<ion-item ng-click="id.id_4 = !id.id_4">Detalhamento do capitulo</ion-item>
+					<ion-list ng-show="id.id_4">
+						<b>Titulo do livro: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._TITULO_DO_LIVRO}} <br>
+						<b>Numero de volumes: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DE_VOLUMES}} <br>
+						<b>Pagina inicial: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._PAGINA_INICIAL}} <br>
+						<b>Pagina final: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._PAGINA_FINAL}} <br>
+						<b>ISBN: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._ISBN}} <br>
+						<b>Organizadores: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._ORGANIZADORES}} <br>
+						<b>Numero da edição da revisão: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DA_EDICAO_REVISAO}} <br>
+						<b>Numero da serie: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NUMERO_DA_SERIE}} <br>
+						<b>Nome da editora: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._NOME_DA_EDITORA}} <br>
+						<b>Cidade da editora: </b>{{_pb_dois.DETALHAMENTO_DO_CAPITULO._CIDADE_DA_EDITORA}} <br>
+						<b>Sequencia de produção: </b>{{_pb_dois._SEQUENCIA_PRODUCAO}}
 					</ion-list>
-					<ion-list>
+					<ion-item ng-click="id.id_5 = !id.id_5">Autores</ion-item>
+					<ion-list ng-show="id.id_5">
 						<ion-list ng-repeat="_pb_dois_ in _pb_dois.AUTORES">
-							{{_pb_dois_._NOME_COMPLETO_DO_AUTOR}} <br>
-							{{_pb_dois_._NOME_PARA_CITACAO}} <br>
-							{{_pb_dois_._ORDEM_DE_AUTORIA}} <br>
-							{{_pb_dois_._NRO_ID_CNPQ}} <br>
+							<b>Nome completo do autor: </b>{{_pb_dois_._NOME_COMPLETO_DO_AUTOR}} <br>
+							<b>Nome para citação: </b>{{_pb_dois_._NOME_PARA_CITACAO}} <br>
+							<b>Ordem de autoria: </b>{{_pb_dois_._ORDEM_DE_AUTORIA}} <br>
+							<b>Numero id CNPQ: </b>{{_pb_dois_._NRO_ID_CNPQ}}
 						</ion-list>
 					</ion-list>
-					{{_pb_dois._SEQUENCIA_PRODUCAO}}
 				</div>
 			</ion-list>
 		</ion-list>
 		<ion-list ng-repeat="pb_tres in dadosCurriculo">
-			<ion-item ng-click="id.id_4 = !id.id_4">
-				ARTIGOS ACEITOS PARA PUBLICAÇÃO
-			</ion-item>
+			<ion-item ng-click="id.id_4 = !id.id_4">Artigos Aceitos para Publicação</ion-item>
 			<ion-list ng-show="id.id_4"
 				ng-repeat="_pb_tres in pb_tres.CURRICULO_VITAE.PRODUCAO_BIBLIOGRAFICA.ARTIGOS_ACEITOS_PARA_PUBLICACAO.ARTIGO_ACEITO_PARA_PUBLICACAO">
 				<div class="card">
 					<ion-list>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._NATUREZA}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._ANO_DO_ARTIGO}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._PAIS_DE_PUBLICACAO}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._IDIOMA}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._MEIO_DE_DIVULGACAO}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._HOME_PAGE_DO_TRABALHO}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._FLAG_RELEVANCIA}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._DOI}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO_INGLES}} <br>
-						{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+						<ion-item>Dados basicos do Artigo</ion-item>
+						<b>Titulo do artigo: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO}} <br>
+						<b>Natureza do artigo: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._NATUREZA}} <br>
+						<b>Ano do artigo: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._ANO_DO_ARTIGO}} <br>
+						<b>Pais de publicação: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._PAIS_DE_PUBLICACAO}} <br>
+						<b>Idioma: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._IDIOMA}} <br>
+						<b>Meio de divulgação: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._MEIO_DE_DIVULGACAO}} <br>
+						<b>Home page do trabalho: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._HOME_PAGE_DO_TRABALHO}} <br>
+						<b>Flag de relevancia: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._FLAG_RELEVANCIA}} <br>
+						<b>DOI: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._DOI}} <br>
+						<b>Titulo do artigo ingles: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._TITULO_DO_ARTIGO_INGLES}} <br>
+						<b>Flag divulgação cientifica: </b>{{_pb_tres.DADOS_BASICOS_DO_ARTIGO._FLAG_DIVULGACAO_CIENTIFICA}}
 					</ion-list>
-					<ion-list>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._TITULO_DO_PERIODICO_OU_REVISTA}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._ISSN}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._VOLUME}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._FASCICULO}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._SERIE}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._PAGINA_INICIAL}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._PAGINA_FINAL}} <br>
-						{{_pb_tres.DETALHAMENTO_DO_ARTIGO._LOCAL_DE_PUBLICACAO}} <br>
+					<ion-item ng-click="id.id_5 = !id.id_5">Detalhamento do artigo</ion-item>
+					<ion-list ng-show="id.id_5">
+						<b>Titulo do periodico/revista: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._TITULO_DO_PERIODICO_OU_REVISTA}} <br>
+						<b>ISSN: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._ISSN}} <br>
+						<b>Volume: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._VOLUME}} <br>
+						<b>Fasciculo: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._FASCICULO}} <br>
+						<b>Serie: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._SERIE}} <br>
+						<b>Pagina inicial: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._PAGINA_INICIAL}} <br>
+						<b>Pagina final: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._PAGINA_FINAL}} <br>
+						<b>Local de publicação: </b>{{_pb_tres.DETALHAMENTO_DO_ARTIGO._LOCAL_DE_PUBLICACAO}} <br>
+						<b>Sequencia de produção: </b>{{_pb_tres._SEQUENCIA_PRODUCAO}}
 					</ion-list>
-					<ion-list>
+					<ion-item ng-click="id.id_6 = !id.id_6">Autores</ion-item>
+					<ion-list ng-show="id.id_6">
 						<ion-list ng-repeat="_pb_tres_ in _pb_tres.AUTORES">
-							{{_pb_tres_._NOME_COMPLETO_DO_AUTOR}} <br>
-							{{_pb_tres_._NOME_PARA_CITACAO}} <br>
-							{{_pb_tres_._ORDEM_DE_AUTORIA}} <br>
-							{{_pb_tres_._NRO_ID_CNPQ}} <br>
+							<b>Nome completo do autor: </b>{{_pb_tres_._NOME_COMPLETO_DO_AUTOR}} <br>
+							<b>Nome para citação: </b>{{_pb_tres_._NOME_PARA_CITACAO}} <br>
+							<b>Ordem de autoria: </b>{{_pb_tres_._ORDEM_DE_AUTORIA}} <br>
+							<b>Numero id CNPQ: </b>{{_pb_tres_._NRO_ID_CNPQ}}
 						</ion-list>
 					</ion-list>
-					{{_pb_tres._SEQUENCIA_PRODUCAO}}
 				</div>
 			</ion-list>
-		</ion-list>-->
+		</ion-list>
 	</ion-content>
 </ion-view>
