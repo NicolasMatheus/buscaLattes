@@ -1,0 +1,62 @@
+<ion-view view-title="Produção tecnica">
+	<ion-content>
+		<ion-list ng-repeat="pt in dadosCurriculo">
+			<ion-item ng-click="id.id_1 = !id.id_1">Software</ion-item>
+			<ion-list ng-show="id.id_1" ng-repeat="_pt in pt.CURRICULO_VITAE.PRODUCAO_TECNICA.SOFTWARE">
+				<div class="card">
+					<ion-listi>
+						<ion-list>
+							<ion-item>Dados basicos do software</ion-item>
+							<b>Titulo do software: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._TITULO_DO_SOFTWARE}} <br>
+							<b>Natureza do software: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._NATUREZA}} <br>
+							<b>Ano: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._ANO}} <br>
+							<b>Pais: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._PAIS}} <br>
+							<b>Idioma: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._IDIOMA}} <br>
+							<b>Meio de divulgação: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._MEIO_DE_DIVULGACAO}} <br>
+							<b>Home page do trabalho: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._HOME_PAGE_DO_TRABALHO}} <br>
+							<b>Flag de relevancia: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._FLAG_RELEVANCIA}} <br>
+							<b>DOI: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._DOI}} <br>
+							<b>Titulo do software em ingles: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._TITULO_DO_SOFTWARE_INGLES}} <br>
+							<b>Flag de divulgação cientifica: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._FLAG_DIVULGACAO_CIENTIFICA}} <br>
+							<b>Flag de potencial inovação: </b>{{_pt.DADOS_BASICOS_DO_SOFTWARE._FLAG_POTENCIAL_INOVACAO}}
+						</ion-list>
+						<ion-item ng-click="id.id_2 = !id.id._2">Detalhamento do Produto Tecnologico</ion-item>
+						<ion-list ng-show="id.id_2">
+							<ion-list>
+								<b>Finalidade: </b>{{_pt.DETALHAMENTO_DO_SOFTWARE._FINALIDADE}}<br>
+								<b>Plataforma: </b>{{_pt.DETALHAMENTO_DO_SOFTWARE._PLATAFORMA}}<br>
+								<b>Ambiente: </b>{{_pt.DETALHAMENTO_DO_SOFTWARE._AMBIENTE}}<br>
+								<b>Disponibilidade: </b>{{_pt.DETALHAMENTO_DO_SOFTWARE._DISPONIBILIDADE}}<br>
+								<b>Instituição financiadora: </b>{{_pt.DETALHAMENTO_DO_SOFTWARE._INSTITUICAO_FINANCIADORA}}<br>
+								<b>Finalidade em ingles: </b>{{_pt.DETALHAMENTO_DO_SOFTWARE._FINALIDADE_INGLES}}<br>
+								<b>Sequencia de produção: </b>{{_pt._SEQUENCIA_PRODUCAO}}<br>
+							</ion-list>
+						</ion-list>
+						<ion-item ng-click="id.id_3 = !id.id_3">Autores</ion-item>
+						<ion-list ng-show="id.id_3">
+							<ion-list>
+								<b>Nome completo do autor: </b>{{_pt.AUTORES._NOME_COMPLETO_DO_AUTOR}} <br>
+								<b>Nome para citação: </b>{{_pt.AUTORES._NOME_PARA_CITACAO}} <br>
+								<b>Ordem de autoria: </b>{{_pt.AUTORES._ORDEM_DE_AUTORIA}} <br>
+								<b>Numero ID CNPq: </b>{{_pt.AUTORES._NRO_ID_CNPQ}} <br>
+							</ion-list>
+						</ion-list>
+					</ion-list>
+				</div>
+			</ion-list>
+		</ion-list>
+		<ion-list ng-repeat="_pt in dadosCurriculo">
+			<ion-item ng-click="id.id_2 = !id.id_2">Produto Tecnologico</ion-item>
+			<ion-list ng-show="id.id_2">
+				<div class="card">
+					<ion-list ng-repeat="_pt_ in _pt.CURRICULO_VITAE.PRODUCAO_TECNICA">
+						<ion-item>Dados Basicos do Produto Tecnologico</ion-item>
+						<ion-list>
+							<b>Tipo de Produto: </b>{{_pt_.PRODUCAO_TECNICA}} <br>
+						</ion-list>
+					</ion-list>
+				</div>
+			</ion-list>
+		</ion-list>
+	</ion-content>
+</ion-view>
