@@ -101,7 +101,7 @@ angular.module('lattes.config', [])
         }
     })
     .state('app.op', {
-        url : '/outrasproducao',
+        url : '/outraproducao',
         views : {
             'menuContent' : {
                 templateUrl : 'templates/outrasproducao.html',
