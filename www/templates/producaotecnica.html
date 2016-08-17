@@ -45,7 +45,8 @@
 				</div>
 			</ion-list>
 		</ion-list>
-		<ion-list ng-repeat="_pt in dadosCurriculo">
+		<!-- TODO: Arrumar bug -->
+		<!--<ion-list ng-repeat="_pt in dadosCurriculo">
 			<ion-item ng-click="id.id_2 = !id.id_2">Produto Tecnologico</ion-item>
 			<ion-list ng-show="id.id_2">
 				<div class="card">
@@ -56,6 +57,83 @@
 						</ion-list>
 					</ion-list>
 				</div>
+			</ion-list>
+		</ion-list>-->
+		<ion-list ng-repeat="_pt_um in dadosCurriculo">
+			<ion-item ng-click="id.id_2 = !id.id_2">Demais Tipos de Produção</ion-item>
+			<ion-list  ng-show="id.id_2">
+				<ion-list  ng-repeat="_pt_um_ in _pt_um.CURRICULO_VITAE.PRODUCAO_TECNICA.DEMAIS_TIPOS_DE_PRODUCAO_TECNICA.APRESENTACAO_DE_TRABALHO">
+					<div class="card">
+						<ion-list>
+							<ion-item>Dados Basicos da Apresentação de Trbalho</ion-item>
+							<ion-list>
+								<b>Titulo: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._TITULO}} <br>
+								<b>Natureza: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._NATUREZA}} <br>
+								<b>Ano: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._ANO}} <br>
+								<b>Pais: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._PAIS}} <br>
+								<b>Idioma: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._IDIOMA}} <br>
+								<b>Flag de relevancia: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._FLAG_RELEVANCIA}} <br>
+								<b>DOI: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._DOI}} <br>
+								<b>Titulo em ingles: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._TITULO_INGLES}} <br>
+								<b>Flag de divulgação: </b>{{_pt_um_.DADOS_BASICOS_DA_APRESENTACAO_DE_TRABALHO._FLAG_DIVULGACAO_CIENTIFICA}}
+							</ion-list>
+							<ion-item ng-click="id.id_3 = !id.id_3">Detalhamento da Apresentação de Trabalho</ion-item>
+							<ion-list ng-show="id.id_3">
+								<b>Nome do evento: </b>{{_pt_um_.DETALHAMENTO_DA_APRESENTACAO_DE_TRABALHO._NOME_DO_EVENTO}} <br>
+								<b>Instituição promotora: </b>{{_pt_um_.DETALHAMENTO_DA_APRESENTACAO_DE_TRABALHO._INSTITUICAO_PROMOTORA}} <br>
+								<b>Local da apresentação: </b>{{_pt_um_.DETALHAMENTO_DA_APRESENTACAO_DE_TRABALHO._LOCAL_DA_APRESENTACAO}} <br>
+								<b>Cidade da apresentação: </b>{{_pt_um_.DETALHAMENTO_DA_APRESENTACAO_DE_TRABALHO._CIDADE_DA_APRESENTACAO}} <br>
+								<b>Nome do evento em ingles: </b>{{_pt_um_.DETALHAMENTO_DA_APRESENTACAO_DE_TRABALHO._NOME_DO_EVENTO_INGLES}} <br>
+								<b>Sequencia de produção: </b>{{_pt_um_.DETALHAMENTO_DA_APRESENTACAO_DE_TRABALHO._SEQUENCIA_PRODUCAO}}
+							</ion-list>
+							<ion-item ng-click="id.id_4 = !id.id_4">Autores</ion-item>
+							<ion-list ng-show="id.id_4">
+								<b>Nome completo do autor: </b>{{_pt_um_.AUTORES._NOME_COMPLETO_DO_AUTOR}} <br>
+								<b>Nome para citação: </b>{{_pt_um_.AUTORES._NOME_PARA_CITACAO}} <br>
+								<b>Ordem de autoria: </b>{{_pt_um_.AUTORES._ORDEM_DE_AUTORIA}} <br>
+								<b>Numero ID CNPq: </b>{{_pt_um_.AUTORES._NRO_ID_CNPQ}}
+							</ion-list>
+						</ion-list>
+					</div>
+				</ion-list>
+				<ion-list ng-repeat="_pt_dois_ in _pt_um.CURRICULO_VITAE.PRODUCAO_TECNICA.DEMAIS_TIPOS_DE_PRODUCAO_TECNICA.ORGANIZACAO_DE_EVENTO">
+					<div class="card">
+						<ion-list>
+							<ion-item>Dados Basicos da Organização de Evento</ion-item>
+							<ion-list>
+								<b>Titulo:</b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._TITULO}}	<br>
+								<b>Tipo: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._TIPO}} <br>
+								<b>Natureza: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._NATUREZA}} <br>
+								<b>Ano: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._ANO}} <br>
+								<b>Pais: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._PAIS}} <br>
+								<b>Idioma: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._IDIOMA}} <br>
+								<b>Meio de divulgação: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._MEIO_DE_DIVULGACAO}} <br>
+								<b>Home page do trabalho: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._HOME_PAGE_DO_TRABALHO}} <br>
+								<b>Flag de relevancia: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._FLAG_RELEVANCIA}} <br>
+								<b>DOI: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._DOI}} <br>
+								<b>Titulo em ingles: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._TITULO_INGLES}} <br>
+								<b>Flag divulgação cientifica: </b> {{_pt_dois_.DADOS_BASICOS_DA_ORGANIZACAO_DE_EVENTO._FLAG_DIVULGACAO_CIENTIFICA}}
+							</ion-list>
+							<ion-item ng-click="id.id_3 = id.id_3">Detalhamento da Organização de Evento</ion-item>
+							<ion-list ng-show="id.id_3">
+								<b>Instituição promotora: </b> {{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._INSTITUICAO_PROMOTORA}} <br>
+								<b>Duração em semanas: </b>{{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._DURACAO_EM_SEMANAS}} <br>
+								<b>Flag evento itinerante: </b> {{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._FLAG_EVENTO_ITINERANTE}} <br>
+								<b>Flag catalogo: </b>{{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._FLAG_CATALOGO}} <br>
+								<b>Local: </b>{{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._LOCAL}} <br>
+								<b>Cidade: </b>{{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._CIDADE}} <br>
+								<b>Sequencia de produção: </b> {{_pt_dois_.DETALHAMENTO_DA_ORGANIZACAO_DE_EVENTO._SEQUENCIA_PRODUCAO}} 
+							</ion-list>
+							<ion-item ng-click="id.id_4 = id.id_4">Autores</ion-item>
+							<ion-list ng-show="id.id_4" ng-repeat="_pt_dois_um in _pt_dois_.AUTORES">
+								<b>Nome completo do autor: </b>{{_pt_dois_um._NOME_COMPLETO_DO_AUTOR}} <br>
+								<b>Nome para citação: </b>{{_pt_dois_um._NOME_PARA_CITACAO}} <br>
+								<b>Ordem de autoria: </b>{{_pt_dois_um._ORDEM_DE_AUTORIA}} <br>
+								<b>Numero ID CNPq: </b>{{_pt_dois_um._NRO_ID_CNPQ}}
+							</ion-list>
+						</ion-list>
+					</div>
+				</ion-list>
 			</ion-list>
 		</ion-list>
 	</ion-content>
