@@ -8,12 +8,12 @@
       Nícolas Matheus Martins Vaz
     </author>
   <content src="index.html"/>
-  <access origin="*" />
-  <allow-intent href="*" />
-  <access origin="content:///*" />
-  <allow-navigation href="http://*/*" />
-  <allow-navigation href="https://*/*" />
-  <allow-navigation href="data:*" />
+  <access origin="*"/>
+  <access origin="content:///*"/>
+  <allow-intent href="*"/>
+  <allow-navigation href="http://*/*"/>
+  <allow-navigation href="https://*/*"/>
+  <allow-navigation href="data:*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -22,7 +22,7 @@
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="10000"/>
   <feature name="StatusBar">
-    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
@@ -33,14 +33,14 @@
     <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
     <splash src="resources/android/splash/drawable-land-ldpi-screen.png" density="land-ldpi"/>
     <splash src="resources/android/splash/drawable-land-mdpi-screen.png" density="land-mdpi"/>
-    <splash src="resources/android/splash/drawable-land-hdpi-screen.png" density="land-hdpi"/>
-    <splash src="resources/android/splash/drawable-land-xhdpi-screen.png" density="land-xhdpi"/>
     <splash src="resources/android/splash/drawable-port-ldpi-screen.png" density="port-ldpi"/>
     <splash src="resources/android/splash/drawable-port-mdpi-screen.png" density="port-mdpi"/>
-    <splash src="resources/android/splash/drawable-port-hdpi-screen.png" density="port-hdpi"/>
-    <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
-    <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
-    <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+  <plugin name="cordova-plugin-console" spec="~1.0.3"/>
+  <plugin name="cordova-plugin-statusbar" spec="~2.1.3"/>
+  <plugin name="cordova-plugin-whitelist" spec="~1.2.2"/>
+  <plugin name="cordova-plugin-device" spec="~1.1.2"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~3.2.2"/>
+  <plugin name="ionic-plugin-keyboard" spec="~2.2.1"/>
 </widget>
