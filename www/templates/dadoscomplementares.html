@@ -3,239 +3,410 @@
 		<ion-list>
 			<ion-item ng-click="id.id_1 = !id.id_1">Informações Adicionais</ion-item>
 			<ion-list ng-show="id.id_1" ng-repeat="__dc in dadosCurriculo">
-				<ion-item ng-click="id.id_2 = !id.id_2">Informações adicionais de instituição</ion-item>
-				<ion-list ng-show="id.id_2" ng-repeat="DC_ in __dc.CURRICULO_VITAE.DADOS_COMPLEMENTARES.INFORMACOES_ADICIONAIS_INSTITUICOES.INFORMACAO_ADICIONAL_INSTITUICAO">
-					<div class="card">	
-						<b>Sigla da instituição: </b>{{DC_._SIGLA_INSTITUICAO}} <br>
-						<b>Codigo da instituição: </b>{{DC_._CODIGO_INSTITUICAO}} <br>
-						<b>Sigla UF instituição: </b>{{DC_._SIGLA_UF_INSTITUICAO}} <br>
-						<b>Sigla pais instituição: </b>{{DC_._SIGLA_PAIS_INSTITUICAO}} <br>
-						<b>Nome pais instituição: </b>{{DC_._NOME_PAIS_INSTITUICAO}} <br>
-						<b>Flag agencia fomento: </b>{{DC_._FLAG_AGENCIA_FOMENTO}} <br>
-						<b>Flag instituição de ensino: </b>{{DC_._FLAG_INSTITUICAO_DE_ENSINO}} <br>
-					</div>
-				</ion-list>
-				<ion-item ng-click="id.id_3 = !id.id_3">Informações adicionais de cursos</ion-item>
-				<ion-list ng-show="id.id_3" ng-repeat="DC__ in __dc.CURRICULO_VITAE.DADOS_COMPLEMENTARES.INFORMACOES_ADICIONAIS_CURSOS.INFORMACAO_ADICIONAL_CURSO">
-					<div class="card">	
-						<b>Nome da instituição: </b>{{DC__._NOME_INSTITUICAO}} <br>
-						<b>Nivel do curso: </b>{{DC__._NIVEL_CURSO}} <br>
-						<b>Codigo do curso: </b>{{DC__._CODIGO_CURSO}} <br>
-						<b>Codigo do orgão: </b>{{DC__._CODIGO_ORGAO}} <br>
-						<b>Nome do orgão: </b>{{DC__._NOME_ORGAO}} <br>
-						<b>Codigo da instituição: </b>{{DC__._CODIGO_INSTITUICAO}} <br>
-						<b>Grande area conhecimento: </b>{{DC__._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
-						<b>Area conhecimento: </b>{{DC__._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
-						<b>Sub area do conhecimento: </b>{{DC__._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
-						<b>Nome da especialidade: </b>{{DC__._NOME_DA_ESPECIALIDADE}} <br>
-					</div>
-				</ion-list>
-			</ion-list>
-			<ion-item ng-click="id.id_2 = !id.id_2">Orientações em Andamento</ion-item>
-			<ion-list ng-show="id.id_2" ng-repeat="dc_um in dadosCurriculo">
-				<ion-item ng-click="id.id_3 = !id.id_3">Doutorado</ion-item>
-				<ion-list ng-show="id.id_3">
-					<div class="card">
-						<ion-item>Dados Basicos da Orientação</ion-item>
-						<b>Titulo do trabalho: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._TITULO_DO_TRABALHO}} <br>
-						<b>Natureza: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NATUREZA}} <br>
-						<b>Ano: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._ANO}} <br>
-						<b>Pais: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._PAIS}} <br>
-						<b>Idioma: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._IDIOMA}} <br>
-						<b>Home page: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._HOME_PAGE}} <br>
-						<b>DOI: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._DOI}} <br>
-						<b>Titulo do trabalho em ingles: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._TITULO_DO_TRABALHO_INGLES}} <br>
-						<ion-item ng-click="id.id_4 = !id.id_4">Detalhamento da Orientação</ion-item>
-						<ion-list ng-show="id.id_4">
-							<b>Tipo de orientação: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._TIPO_DE_ORIENTACAO}}<br>
-							<b>Nome do Orientando: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_DO_ORIENTANDO}}<br>
-							<b>Codigo da instituição: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_INSTITUICAO}}<br>
-							<b>Nome da instituição: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_INSTITUICAO}}<br>
-							<b>Codigo do orgão: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_ORGAO}}<br>
-							<b>Nome do orgão: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_ORGAO}}<br>
-							<b>Codigo do curso: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_CURSO}}<br>
-							<b>Nome do curso: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_CURSO}}<br>
-							<b>Flag da bolsa: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._FLAG_BOLSA}}<br>
-							<b>Codigo agencia financiadora: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_AGENCIA_FINANCIADORA}}<br>
-							<b>Nome da agencia: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_DA_AGENCIA}}<br>
-							<b>Numero id orientando: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NUMERO_ID_ORIENTANDO}}<br>
-							<b>Nome do curso em ingles: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_CURSO_INGLES}}<br>
+				<div class="card">
+					<ion-list>
+						<ion-item ng-click="id.id_2 = !id.id_2">Informações adicionais de instituição</ion-item>
+						<ion-list ng-show="id.id_2" ng-repeat="DC_ in __dc.CURRICULO_VITAE.DADOS_COMPLEMENTARES.INFORMACOES_ADICIONAIS_INSTITUICOES.INFORMACAO_ADICIONAL_INSTITUICAO">
+							<div class="card">	
+								<b>Sigla da instituição: </b>{{DC_._SIGLA_INSTITUICAO}} <br>
+								<b>Codigo da instituição: </b>{{DC_._CODIGO_INSTITUICAO}} <br>
+								<b>Sigla UF instituição: </b>{{DC_._SIGLA_UF_INSTITUICAO}} <br>
+								<b>Sigla pais instituição: </b>{{DC_._SIGLA_PAIS_INSTITUICAO}} <br>
+								<b>Nome pais instituição: </b>{{DC_._NOME_PAIS_INSTITUICAO}} <br>
+								<b>Flag agencia fomento: </b>{{DC_._FLAG_AGENCIA_FOMENTO}} <br>
+								<b>Flag instituição de ensino: </b>{{DC_._FLAG_INSTITUICAO_DE_ENSINO}} <br>
+							</div>
 						</ion-list>
-					</div>
-				</ion-list>
-				<ion-item ng-click="id.id_5 = !id.id_5">Iniciação Cientifica</ion-item>
-				<ion-list ng-show="id.id_5" ng-repeat="__dc_um in dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA">
-					<div class="card">
-						<ion-item>Dados basicos da orientação</ion-item>
-						<b>Titulo do trabalho: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._TITULO_DO_TRABALHO}}<br>
-						<b>Natureza: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NATUREZA}}<br>
-						<b>Ano: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._ANO}}<br>
-						<b>Pais: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._PAIS}}<br>
-						<b>Idioma: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._IDIOMA}}<br>
-						<b>Home page: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._HOME_PAGE}}<br>
-						<b>DOI: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._DOI}}<br>
-						<b>Titulo do trabalho em ingles: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._TITULO_DO_TRABALHO_INGLES}}<br>
-						<ion-item ng-click="id.id_6 = !id.id_6">Detalhamento da orientação</ion-item>
-						<ion-list ng-show="id.id_6">
-						<b>Nome do orientando: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_DO_ORIENTANDO}}<br>
-						<b>Codigo instituição: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_INSTITUICAO}}<br>
-						<b>Nome da instituição: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_INSTITUICAO}}<br>
-						<b>Codigo do orgão: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_ORGAO}}<br>
-						<b>Nome do orgão: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_ORGAO}}<br>
-						<b>Codigo do curso: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_CURSO}}<br>
-						<b>Nome do curso: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_CURSO}}<br>
-						<b>Flag da bolsa: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._FLAG_BOLSA}}<br>
-						<b>Codigo agencia financiadora: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_AGENCIA_FINANCIADORA}}<br>
-						<b>Nome da agencia: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_DA_AGENCIA}}<br>
-						<b>Numero id orientando: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NUMERO_ID_ORIENTANDO}}<br>
-						<b>Nome curso ingles: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_CURSO_INGLES}}<br>
+						<ion-item ng-click="id.id_3 = !id.id_3">Informações adicionais de cursos</ion-item>
+						<ion-list ng-show="id.id_3" ng-repeat="DC__ in __dc.CURRICULO_VITAE.DADOS_COMPLEMENTARES.INFORMACOES_ADICIONAIS_CURSOS.INFORMACAO_ADICIONAL_CURSO">
+							<div class="card">	
+								<b>Nome da instituição: </b>{{DC__._NOME_INSTITUICAO}} <br>
+								<b>Nivel do curso: </b>{{DC__._NIVEL_CURSO}} <br>
+								<b>Codigo do curso: </b>{{DC__._CODIGO_CURSO}} <br>
+								<b>Codigo do orgão: </b>{{DC__._CODIGO_ORGAO}} <br>
+								<b>Nome do orgão: </b>{{DC__._NOME_ORGAO}} <br>
+								<b>Codigo da instituição: </b>{{DC__._CODIGO_INSTITUICAO}} <br>
+								<b>Grande area conhecimento: </b>{{DC__._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
+								<b>Area conhecimento: </b>{{DC__._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
+								<b>Sub area do conhecimento: </b>{{DC__._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
+								<b>Nome da especialidade: </b>{{DC__._NOME_DA_ESPECIALIDADE}} <br>
+							</div>
 						</ion-list>
-					</div>
-				</ion-list>
+					</ion-list>
+				</div>
 			</ion-list>
-			<ion-item ng-click="id.id_3 = !id.id_3">Participação em eventos e congressos</ion-item>
-			<ion-list ng-show="id.id_3" ng-repeat="dc_dois in dadosCurriculo">
-				<ion-list>
-					<ion-item ng-click="id.id_4 = !id.id_4">Congressos</ion-item>
-					<ion-list ng-show="id.id_4">
-						<div class="card">
-							<ion-list ng-repeat="dc_dois_um in dc_dois.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_EVENTOS_CONGRESSOS.PARTICIPACAO_EM_CONGRESSO">
-								<ion-item>Dados Basicos</ion-item>
-								<ion-list>
-									<b>Titulo: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._TITULO}}<br>
-									<b>Natureza: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._NATUREZA}}<br>
-									<b>Ano: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._ANO}}<br>
-									<b>Pais: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._PAIS}}<br>
-									<b>Idioma: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._IDIOMA}}<br>
-									<b>Meio de divulgação: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._MEIO_DE_DIVULGACAO}}<br>
-									<b>Home page do trabalho: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._HOME_PAGE_DO_TRABALHO}}<br>
-									<b>Flag de Relevancia: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._FLAG_RELEVANCIA}}<br>
-									<b>Tipo de participação: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._TIPO_PARTICIPACAO}}<br>
-									<b>Forma de participação: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._FORMA_PARTICIPACAO}}<br>
-									<b>DOI: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._DOI}}<br>
-									<b>Titulo em ingles: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._TITULO_INGLES}}<br>
-									<b>Flag de divulgação cientifica: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._FLAG_DIVULGACAO_CIENTIFICA}}<br>
-								</ion-list>
-								 <ion-item ng-click="id.id_5 = !id.id_5">Detalhamento da participação</ion-item>
-								<ion-list ng-show="id.id_5">
-									<b>Nome do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._NOME_DO_EVENTO}}<br>
-									<b>Codigo da instituição: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._CODIGO_INSTITUICAO}}<br>
-									<b>Nome da instituição: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._NOME_INSTITUICAO}}<br>
-									<b>Local do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._LOCAL_DO_EVENTO}}<br>
-									<b>Cidade do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._CIDADE_DO_EVENTO}}<br>
-									<b>Nome do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._NOME_DO_EVENTO_INGLES}}<br>		
-								</ion-list>
-								<ion-item ng-click="id.id_6 = !id.id_6">Participante</ion-item>
+			<!-- -->
+			<ion-item ng-click="id.id_4 = !id.id_4">Orientações em Andamento</ion-item>
+			<ion-list ng-show="id.id_4" ng-repeat="dc_um in dadosCurriculo">
+				<div class="card">
+					<ion-list>
+						<ion-item ng-click="id.id_5 = !id.id_5">Doutorado</ion-item>
+						<ion-list ng-show="id.id_5">
+							<div class="card">
+								<ion-item>Dados Basicos da Orientação</ion-item>
+								<b>Titulo do trabalho: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._TITULO_DO_TRABALHO}} <br>
+								<b>Natureza: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NATUREZA}} <br>
+								<b>Ano: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._ANO}} <br>
+								<b>Pais: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._PAIS}} <br>
+								<b>Idioma: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._IDIOMA}} <br>
+								<b>Home page: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._HOME_PAGE}} <br>
+								<b>DOI: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._DOI}} <br>
+								<b>Titulo do trabalho em ingles: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._TITULO_DO_TRABALHO_INGLES}} <br>
+								<ion-item ng-click="id.id_6 = !id.id_6">Detalhamento da Orientação</ion-item>
 								<ion-list ng-show="id.id_6">
-									<b>Nome completo do participante: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_COMPLETO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
-									<b>Nome para cirtação: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_PARA_CITACAO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
-									<b>Ordem de participação: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._ORDEM_PARTICIPANTE}}<br>
-									<b>Numero ID CNPq: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NRO_ID_CNPQ}}<br>
-								</ion-list><br>
-							</ion-list>
-						</div>
-					</ion-list>
-					<ion-item ng-click="id.id_5 = !id.id_5">Seminarios</ion-item>
-					<ion-list ng-show="id.id_5">
-						<div class="card">
-							<ion-list ng-repeat="dc_dois_dois in dc_dois.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_EVENTOS_CONGRESSOS.PARTICIPACAO_EM_SEMINARIO">
-								<ion-item>Dados Basicos</ion-item>
-								<ion-list>
-									<b>Titulo: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._TITULO}}<br>
-									<b>Natureza: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._NATUREZA}}<br>
-									<b>Ano: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._ANO}}<br>
-									<b>Pais: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._PAIS}}<br>
-									<b>Idioma: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._IDIOMA}}<br>
-									<b>Meio de divulgação: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._MEIO_DE_DIVULGACAO}}<br>
-									<b>Home page do trabalho: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._HOME_PAGE_DO_TRABALHO}}<br>
-									<b>Flag de Relevancia: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._FLAG_RELEVANCIA}}<br>
-									<b>Tipo de participação: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._TIPO_PARTICIPACAO}}<br>
-									<b>Forma de participação: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._FORMA_PARTICIPACAO}}<br>
-									<b>DOI: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._DOI}}<br>
-									<b>Titulo em ingles: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._TITULO_INGLES}}<br>
-									<b>Flag de divulgação cientifica: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._FLAG_DIVULGACAO_CIENTIFICA}}<br>
+									<b>Tipo de orientação: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._TIPO_DE_ORIENTACAO}}<br>
+									<b>Nome do Orientando: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_DO_ORIENTANDO}}<br>
+									<b>Codigo da instituição: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_INSTITUICAO}}<br>
+									<b>Nome da instituição: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_INSTITUICAO}}<br>
+									<b>Codigo do orgão: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_ORGAO}}<br>
+									<b>Nome do orgão: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_ORGAO}}<br>
+									<b>Codigo do curso: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_CURSO}}<br>
+									<b>Nome do curso: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_CURSO}}<br>
+									<b>Flag da bolsa: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._FLAG_BOLSA}}<br>
+									<b>Codigo agencia financiadora: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._CODIGO_AGENCIA_FINANCIADORA}}<br>
+									<b>Nome da agencia: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_DA_AGENCIA}}<br>
+									<b>Numero id orientando: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NUMERO_ID_ORIENTANDO}}<br>
+									<b>Nome do curso em ingles: </b>{{dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_DOUTORADO._NOME_CURSO_INGLES}}<br>
 								</ion-list>
-								 <ion-item ng-click="id.id_6 = !id.id_6">Detalhamento da participação</ion-item>
-								<ion-list ng-show="id.id_6">
-									<b>Nome do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._NOME_DO_EVENTO}}<br>
-									<b>Codigo da instituição: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._CODIGO_INSTITUICAO}}<br>
-									<b>Nome da instituição: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._NOME_INSTITUICAO}}<br>
-									<b>Local do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._LOCAL_DO_EVENTO}}<br>
-									<b>Cidade do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._CIDADE_DO_EVENTO}}<br>
-									<b>Nome do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._NOME_DO_EVENTO_INGLES}}<br>		
-								</ion-list>
-								<ion-item ng-click="id.id_7 = !id.id_7">Participante</ion-item>
-								<ion-list ng-show="id.id_7">
-									<b>Nome completo do participante: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_COMPLETO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
-									<b>Nome para cirtação: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_PARA_CITACAO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
-									<b>Ordem de participação: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._ORDEM_PARTICIPANTE}}<br>
-									<b>Numero ID CNPq: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NRO_ID_CNPQ}}<br>
-								</ion-list><br>
-							</ion-list>
-						</div>
-					</ion-list>
-					<ion-item ng-click="id.id_7 = !id.id_7">Simposio</ion-item>
-					<ion-list ng-show="id.id_7">
-						<div class="card">
-							<ion-list ng-repeat="dc_dois_tres in dc_dois.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_EVENTOS_CONGRESSOS.PARTICIPACAO_EM_SIMPOSIO">
-								<ion-item>Dados Basicos</ion-item>
-								<ion-list>
-									<b>Titulo: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._TITULO}}<br>
-									<b>Natureza: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._NATUREZA}}<br>
-									<b>Ano: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._ANO}}<br>
-									<b>Pais: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._PAIS}}<br>
-									<b>Idioma: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._IDIOMA}}<br>
-									<b>Meio de divulgação: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._MEIO_DE_DIVULGACAO}}<br>
-									<b>Home page do trabalho: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._HOME_PAGE_DO_TRABALHO}}<br>
-									<b>Flag de Relevancia: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._FLAG_RELEVANCIA}}<br>
-									<b>Tipo de participação: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._TIPO_PARTICIPACAO}}<br>
-									<b>Forma de participação: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._FORMA_PARTICIPACAO}}<br>
-									<b>DOI: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._DOI}}<br>
-									<b>Titulo em ingles: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._TITULO_INGLES}}<br>
-									<b>Flag de divulgação cientifica: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._FLAG_DIVULGACAO_CIENTIFICA}}<br>
-								</ion-list>
-								 <ion-item ng-click="id.id_8 = !id.id_8">Detalhamento da participação</ion-item>
+							</div>
+						</ion-list>
+						<ion-item ng-click="id.id_7 = !id.id_7">Iniciação Cientifica</ion-item>
+						<ion-list ng-show="id.id_7" ng-repeat="__dc_um in dc_um.CURRICULO_VITAE.DADOS_COMPLEMENTARES.ORIENTACOES_EM_ANDAMENTO.ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA">
+							<div class="card">
+								<ion-item>Dados basicos da orientação</ion-item>
+								<b>Titulo do trabalho: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._TITULO_DO_TRABALHO}}<br>
+								<b>Natureza: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NATUREZA}}<br>
+								<b>Ano: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._ANO}}<br>
+								<b>Pais: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._PAIS}}<br>
+								<b>Idioma: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._IDIOMA}}<br>
+								<b>Home page: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._HOME_PAGE}}<br>
+								<b>DOI: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._DOI}}<br>
+								<b>Titulo do trabalho em ingles: </b>{{__dc_um.DADOS_BASICOS_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._TITULO_DO_TRABALHO_INGLES}}<br>
+								<ion-item ng-click="id.id_8 = !id.id_8">Detalhamento da orientação</ion-item>
 								<ion-list ng-show="id.id_8">
-									<b>Nome do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._NOME_DO_EVENTO}}<br>
-									<b>Codigo da instituição: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._CODIGO_INSTITUICAO}}<br>
-									<b>Nome da instituição: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._NOME_INSTITUICAO}}<br>
-									<b>Local do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._LOCAL_DO_EVENTO}}<br>
-									<b>Cidade do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._CIDADE_DO_EVENTO}}<br>
-									<b>Nome do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._NOME_DO_EVENTO_INGLES}}<br>		
+								<b>Nome do orientando: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_DO_ORIENTANDO}}<br>
+								<b>Codigo instituição: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_INSTITUICAO}}<br>
+								<b>Nome da instituição: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_INSTITUICAO}}<br>
+								<b>Codigo do orgão: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_ORGAO}}<br>
+								<b>Nome do orgão: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_ORGAO}}<br>
+								<b>Codigo do curso: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_CURSO}}<br>
+								<b>Nome do curso: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_CURSO}}<br>
+								<b>Flag da bolsa: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._FLAG_BOLSA}}<br>
+								<b>Codigo agencia financiadora: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._CODIGO_AGENCIA_FINANCIADORA}}<br>
+								<b>Nome da agencia: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_DA_AGENCIA}}<br>
+								<b>Numero id orientando: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NUMERO_ID_ORIENTANDO}}<br>
+								<b>Nome curso ingles: </b>{{__dc_um.DETALHAMENTO_DA_ORIENTACAO_EM_ANDAMENTO_DE_INICIACAO_CIENTIFICA._NOME_CURSO_INGLES}}<br>
 								</ion-list>
-								<ion-item ng-click="id.id_9 = !id.id_9">Participante</ion-item>
-								<ion-list ng-show="id.id_9">
-									<b>Nome completo do participante: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_COMPLETO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
-									<b>Nome para cirtação: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_PARA_CITACAO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
-									<b>Ordem de participação: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._ORDEM_PARTICIPANTE}}<br>
-									<b>Numero ID CNPq: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NRO_ID_CNPQ}}<br>
-								</ion-list><br>
+							</div>
+						</ion-list>
+					</ion-list>
+				</div>
+			</ion-list>
+			<!-- -->
+			<ion-item ng-click="id.id_9 = !id.id_9">Participação em eventos e congressos</ion-item>
+			<ion-list ng-show="id.id_9" ng-repeat="dc_dois in dadosCurriculo">
+				<div class="card">
+					<ion-list>
+						<ion-item ng-click="id.id_10 = !id.id_10">Congressos</ion-item>
+						<ion-list ng-show="id.id_10">
+							<div class="card">
+								<ion-list ng-repeat="dc_dois_um in dc_dois.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_EVENTOS_CONGRESSOS.PARTICIPACAO_EM_CONGRESSO">
+									<ion-item>Dados Basicos</ion-item>
+									<ion-list>
+										<b>Titulo: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._TITULO}}<br>
+										<b>Natureza: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._NATUREZA}}<br>
+										<b>Ano: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._ANO}}<br>
+										<b>Pais: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._PAIS}}<br>
+										<b>Idioma: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._IDIOMA}}<br>
+										<b>Meio de divulgação: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._MEIO_DE_DIVULGACAO}}<br>
+										<b>Home page do trabalho: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._HOME_PAGE_DO_TRABALHO}}<br>
+										<b>Flag de Relevancia: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._FLAG_RELEVANCIA}}<br>
+										<b>Tipo de participação: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._TIPO_PARTICIPACAO}}<br>
+										<b>Forma de participação: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._FORMA_PARTICIPACAO}}<br>
+										<b>DOI: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._DOI}}<br>
+										<b>Titulo em ingles: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._TITULO_INGLES}}<br>
+										<b>Flag de divulgação cientifica: </b>{{dc_dois_um.DADOS_BASICOS_DA_PARTICIPACAO_EM_CONGRESSO._FLAG_DIVULGACAO_CIENTIFICA}}<br>
+									</ion-list>
+									 <ion-item ng-click="id.id_11 = !id.id_11">Detalhamento da participação</ion-item>
+									<ion-list ng-show="id.id_11">
+										<b>Nome do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._NOME_DO_EVENTO}}<br>
+										<b>Codigo da instituição: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._CODIGO_INSTITUICAO}}<br>
+										<b>Nome da instituição: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._NOME_INSTITUICAO}}<br>
+										<b>Local do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._LOCAL_DO_EVENTO}}<br>
+										<b>Cidade do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._CIDADE_DO_EVENTO}}<br>
+										<b>Nome do evento: </b>{{dc_dois_um.DETALHAMENTO_DA_PARTICIPACAO_EM_CONGRESSO._NOME_DO_EVENTO_INGLES}}<br>		
+									</ion-list>
+									<ion-item ng-click="id.id_12 = !id.id_12">Participante</ion-item>
+									<ion-list ng-show="id.id_12">
+										<b>Nome completo do participante: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_COMPLETO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
+										<b>Nome para cirtação: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_PARA_CITACAO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
+										<b>Ordem de participação: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._ORDEM_PARTICIPANTE}}<br>
+										<b>Numero ID CNPq: </b>{{dc_dois_um.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NRO_ID_CNPQ}}<br>
+									</ion-list><br>
+								</ion-list>
+							</div>
+						</ion-list>
+						<ion-item ng-click="id.id_13 = !id.id_13">Seminarios</ion-item>
+						<ion-list ng-show="id.id_13">
+							<div class="card">
+								<ion-list ng-repeat="dc_dois_dois in dc_dois.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_EVENTOS_CONGRESSOS.PARTICIPACAO_EM_SEMINARIO">
+									<ion-item>Dados Basicos</ion-item>
+									<ion-list>
+										<b>Titulo: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._TITULO}}<br>
+										<b>Natureza: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._NATUREZA}}<br>
+										<b>Ano: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._ANO}}<br>
+										<b>Pais: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._PAIS}}<br>
+										<b>Idioma: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._IDIOMA}}<br>
+										<b>Meio de divulgação: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._MEIO_DE_DIVULGACAO}}<br>
+										<b>Home page do trabalho: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._HOME_PAGE_DO_TRABALHO}}<br>
+										<b>Flag de Relevancia: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._FLAG_RELEVANCIA}}<br>
+										<b>Tipo de participação: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._TIPO_PARTICIPACAO}}<br>
+										<b>Forma de participação: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._FORMA_PARTICIPACAO}}<br>
+										<b>DOI: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._DOI}}<br>
+										<b>Titulo em ingles: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._TITULO_INGLES}}<br>
+										<b>Flag de divulgação cientifica: </b>{{dc_dois_dois.DADOS_BASICOS_DA_PARTICIPACAO_EM_SEMINARIO._FLAG_DIVULGACAO_CIENTIFICA}}<br>
+									</ion-list>
+									 <ion-item ng-click="id.id_14 = !id.id_14">Detalhamento da participação</ion-item>
+									<ion-list ng-show="id.id_14">
+										<b>Nome do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._NOME_DO_EVENTO}}<br>
+										<b>Codigo da instituição: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._CODIGO_INSTITUICAO}}<br>
+										<b>Nome da instituição: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._NOME_INSTITUICAO}}<br>
+										<b>Local do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._LOCAL_DO_EVENTO}}<br>
+										<b>Cidade do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._CIDADE_DO_EVENTO}}<br>
+										<b>Nome do evento: </b>{{dc_dois_dois.DETALHAMENTO_DA_PARTICIPACAO_EM_SEMINARIO._NOME_DO_EVENTO_INGLES}}<br>		
+									</ion-list>
+									<ion-item ng-click="id.id_15 = !id.id_15">Participante</ion-item>
+									<ion-list ng-show="id.id_15">
+										<b>Nome completo do participante: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_COMPLETO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
+										<b>Nome para cirtação: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_PARA_CITACAO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
+										<b>Ordem de participação: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._ORDEM_PARTICIPANTE}}<br>
+										<b>Numero ID CNPq: </b>{{dc_dois_dois.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NRO_ID_CNPQ}}<br>
+									</ion-list><br>
+								</ion-list>
+							</div>
+						</ion-list>
+						<ion-item ng-click="id.id_16 = !id.id_16">Simposio</ion-item>
+						<ion-list ng-show="id.id_16">
+							<div class="card">
+								<ion-list ng-repeat="dc_dois_tres in dc_dois.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_EVENTOS_CONGRESSOS.PARTICIPACAO_EM_SIMPOSIO">
+									<ion-item>Dados Basicos</ion-item>
+									<ion-list>
+										<b>Titulo: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._TITULO}}<br>
+										<b>Natureza: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._NATUREZA}}<br>
+										<b>Ano: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._ANO}}<br>
+										<b>Pais: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._PAIS}}<br>
+										<b>Idioma: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._IDIOMA}}<br>
+										<b>Meio de divulgação: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._MEIO_DE_DIVULGACAO}}<br>
+										<b>Home page do trabalho: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._HOME_PAGE_DO_TRABALHO}}<br>
+										<b>Flag de Relevancia: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._FLAG_RELEVANCIA}}<br>
+										<b>Tipo de participação: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._TIPO_PARTICIPACAO}}<br>
+										<b>Forma de participação: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._FORMA_PARTICIPACAO}}<br>
+										<b>DOI: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._DOI}}<br>
+										<b>Titulo em ingles: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._TITULO_INGLES}}<br>
+										<b>Flag de divulgação cientifica: </b>{{dc_dois_tres.DADOS_BASICOS_DA_PARTICIPACAO_EM_SIMPOSIO._FLAG_DIVULGACAO_CIENTIFICA}}<br>
+									</ion-list>
+									 <ion-item ng-click="id.id_17 = !id.id_17">Detalhamento da participação</ion-item>
+									<ion-list ng-show="id.id_17">
+										<b>Nome do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._NOME_DO_EVENTO}}<br>
+										<b>Codigo da instituição: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._CODIGO_INSTITUICAO}}<br>
+										<b>Nome da instituição: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._NOME_INSTITUICAO}}<br>
+										<b>Local do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._LOCAL_DO_EVENTO}}<br>
+										<b>Cidade do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._CIDADE_DO_EVENTO}}<br>
+										<b>Nome do evento: </b>{{dc_dois_tres.DETALHAMENTO_DA_PARTICIPACAO_EM_SIMPOSIO._NOME_DO_EVENTO_INGLES}}<br>		
+									</ion-list>
+									<ion-item ng-click="id.id_18 = !id.id_18">Participante</ion-item>
+									<ion-list ng-show="id.id_18">
+										<b>Nome completo do participante: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_COMPLETO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
+										<b>Nome para cirtação: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NOME_PARA_CITACAO_DO_PARTICIPANTE_DE_EVENTOS_CONGRESSOS}}<br>
+										<b>Ordem de participação: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._ORDEM_PARTICIPANTE}}<br>
+										<b>Numero ID CNPq: </b>{{dc_dois_tres.PARTICIPANTE_DE_EVENTOS_CONGRESSOS._NRO_ID_CNPQ}}<br>
+									</ion-list><br>
+								</ion-list>
+							</div>
+						</ion-list>
+					</ion-list>
+				</div>
+			</ion-list>
+			<!-- -->
+			<ion-item ng-click="id.id_19 = !id.id_19">Participação em banca julgadora</ion-item>
+			<ion-list ng-show="id.id_19" ng-repeat="dc_tres in dadosCurriculo">
+				<div class="card">
+					<ion-item ng-click="id.id_20 = !id.id_20">Concurso publico</ion-item>
+					<ion-list ng-show="id.id_20">
+						<div class="card">
+							<ion-list>
+								<ion-item>Dados Basicos</ion-item>
+								<ion-list>
+									<b>Titulo: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._TITULO}} <br>
+									<b>Natureza: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._NATUREZA}} <br>
+									<b>Ano: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._ANO}} <br>
+									<b>Pais: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._PAIS}} <br>
+									<b>Idioma: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._IDIOMA}} <br>
+									<b>Home page: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._HOME_PAGE}} <br>
+									<b>DOI: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._DOI}} <br>
+									<b>Titulo em ingles: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._TITULO_INGLES}} <br>
+								</ion-list>
+								<ion-item ng-click="id.id_21 = !id.id_21">Detalhamento da banca</ion-item>
+								<ion-list ng-show="id.id_21">
+									<b>Nome da instituição: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DETALHAMENTO_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._NOME_INSTITUICAO}}<br>
+									<b>Codigo da instituição: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DETALHAMENTO_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO._CODIGO_INSTITUICAO}}<br>
+								</ion-list>
+								<ion-item ng-click="id.id_22 = !id.id_22">Participante banca</ion-item>
+								<ion-list ng-show="id.id_22">
+									<b>Nome completo: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.PARTICIPANTE_BANCA._NOME_COMPLETO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Nome para citação: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.PARTICIPANTE_BANCA._NOME_PARA_CITACAO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Ordem participante: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.PARTICIPANTE_BANCA._ORDEM_PARTICIPANTE}}<br>
+									<b>Numero ID CNPq: </b>{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.PARTICIPANTE_BANCA._NRO_ID_CNPQ}}<br>
+								</ion-list>
 							</ion-list>
 						</div>
 					</ion-list>
-				</ion-list>
+				</div>
 			</ion-list>
-			<ion-item ng-click="id.id_4 = !id.id_4">Participação em banca julgadora</ion-item>
-			<ion-list ng-show="id.id_4" ng-repeat="dc_tres in dadosCurriculo">
-				<ion-item ng-click="id.id_5 = !id.id_5">Concurso publico</ion-item>
-				<ion-list ng-show="id.id_5">
-					<div class="card">
-						<ion-list>
-							<ion-item>Dados Basicos</ion-item>
-							<ion-list>
-								{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DADOS_BASICOS_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO}}
-							</ion-list>
-							<ion-item>Detalhamento da banca</ion-item>
-							<ion-list>
-								{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.DETALHAMENTO_DA_BANCA_JULGADORA_PARA_CONCURSO_PUBLICO}}
-							</ion-list>
-							<ion-item>Participante banca</ion-item>
-							<ion-list>
-								{{dc_tres.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_JULGADORA.BANCA_JULGADORA_PARA_CONCURSO_PUBLICO.PARTICIPANTE_BANCA}}
-							</ion-list>
+			<!-- -->
+			<ion-item ng-click="id.id_23 = !id.id_23">Participação em banca de trabalho conclusão</ion-item>
+			<ion-list ng-show="id.id_23">
+				<div class="card">
+					<ion-list  ng-repeat="dc_quatro_ in dadosCurriculo">
+						<ion-item ng-click="id.id_24 = !id.id_24"> Banca de Mestrado</ion-item>
+						<ion-list ng-show="id.id_24" ng-repeat="dc_quatro_um_ in dc_quatro_.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_TRABALHOS_CONCLUSAO.PARTICIPACAO_EM_BANCA_DE_MESTRADO">
+							<div class="card">
+								<ion-item>Dados basicos</ion-item>
+								<ion-list>
+									<b>Titulo:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._TITULO}}<br>
+									<b>Natureza:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._NATUREZA}}<br>
+									<b>Tipo:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._TIPO}}<br>
+									<b>Ano:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._ANO}}<br>
+									<b>Pais:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._PAIS}}<br>
+									<b>Idioma:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._IDIOMA}}<br>
+									<b>Home page:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._HOME_PAGE}}<br>
+									<b>DOI:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._DOI}}<br>
+									<b>Titulo em ingles:</b>{{dc_quatro_um_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._TITULO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Detalhamento da participação</ion-item>
+								<ion-list>
+									<b>Nome do candidato: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._NOME_DO_CANDIDATO}}<br>
+									<b>Codigo da instituição: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._CODIGO_INSTITUICAO}}<br>
+									<b>Nome da instituição: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._NOME_INSTITUICAO}}<br>
+									<b>Codigo do orgão: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._CODIGO_ORGAO}}<br>
+									<b>Nome do orgão: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._NOME_ORGAO}}<br>
+									<b>Codigo do curso: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._CODIGO_CURSO}}<br>
+									<b>Nome do curso: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._NOME_CURSO}}<br>
+									<b>Nome do curso em ingles: </b>{{dc_quatro_um_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_MESTRADO._NOME_CURSO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Participantes em banca</ion-item>
+								<ion-list ng-repeat="_dc_quatro_um_ in dc_quatro_um_.PARTICIPANTE_BANCA">
+									<b>Nome completo: </b>{{_dc_quatro_um_._NOME_COMPLETO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Nome para citação: </b>{{_dc_quatro_um_._NOME_PARA_CITACAO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Ordem participante: </b>{{_dc_quatro_um_._ORDEM_PARTICIPANTE}}<br>
+									<b>Numero ID CNPq: </b>{{_dc_quatro_um_._NRO_ID_CNPQ}}<br>
+								</ion-list>
+							</div>
 						</ion-list>
-					</div>
-				</ion-list>
+						<ion-item ng-click="id.id_25 = !id.id_25">Banca de Exame e Qualificação</ion-item>
+						<ion-list ng-show="id.id_25" ng-repeat="dc_quatro_dois_ in dc_quatro_.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_TRABALHOS_CONCLUSAO.PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO">
+							<div class="card">
+								<ion-item>Dados basicos</ion-item>
+								<ion-list>
+									<b>Titulo: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._TITULO}}<br>
+									<b>Natureza: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._NATUREZA}}<br>
+									<b>Ano: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._ANO}}<br>
+									<b>Pais: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._PAIS}}<br>
+									<b>Idioma: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._IDIOMA}}<br>
+									<b>Home page: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._HOME_PAGE}}<br>
+									<b>DOI: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._DOI}}<br>
+									<b>Titulo em ingles: </b>{{dc_quatro_dois_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._TITULO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Detalhamento</ion-item>
+								<ion-list>
+									<b>Nome do candidato: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._NOME_DO_CANDIDATO}}<br>
+									<b>Codigo da instituição: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._CODIGO_INSTITUICAO}}<br>
+									<b>Nome da instituição: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._NOME_INSTITUICAO}}<br>
+									<b>Codigo do orgão: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._CODIGO_ORGAO}}<br>
+									<b>Nome do orgão: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._NOME_ORGAO}}<br>
+									<b>Codigo do curso: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._CODIGO_CURSO}}<br>
+									<b>Nome do curso: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._NOME_CURSO}}<br>
+									<b>Nome do curso em ingles: </b>{{dc_quatro_dois_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_EXAME_QUALIFICACAO._NOME_CURSO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Participantes</ion-item>
+								<ion-list ng-repeat="_dc_quatro_dois_ in dc_quatro_dois_.PARTICIPANTE_BANCA">
+									<b>Nome completo: </b>{{_dc_quatro_dois_._NOME_COMPLETO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Nome para citação: </b>{{_dc_quatro_dois_._NOME_PARA_CITACAO_DO_PARTICIPANTE_DA_BANCA}<br>
+									<b>Ordem participante: </b>{{_dc_quatro_dois_._ORDEM_PARTICIPANTE}}<br>
+									<b>Numero ID CNPq: </b>{{_dc_quatro_dois_._NRO_ID_CNPQ}}<br>
+								</ion-list>
+							</div>
+						</ion-list>
+						<ion-item ng-click="id.id_26 = !id.id_26">Banca de Aperfeicoamento e Especialização</ion-item>
+						<ion-list ng-show="id.id_26" ng-repeat="dc_quatro_tres_ in dc_quatro_.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_TRABALHOS_CONCLUSAO.PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO">
+							<div class="card">
+								<ion-item>Dados Basicos</ion-item>
+								<ion-list>
+									<b>Titulo: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._TITULO}}<br>
+									<b>Natureza: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._NATUREZA}}<br>
+									<b>Ano: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._ANO}}<br>
+									<b>Pais: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._PAIS}}<br>
+									<b>Idioma: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._IDIOMA}}<br>
+									<b>Home page: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._HOME_PAGE}}<br>
+									<b>DOI: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._DOI}}<br>
+									<b>Titulo em ingles: </b>{{dc_quatro_tres_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._TITULO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Detalhamento</ion-item>
+								<ion-list>
+									<b>Nome do candidato: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._NOME_DO_CANDIDATO}}<br>
+									<b>Codigo da instituição: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._CODIGO_INSTITUICAO}}<br>
+									<b>Nome da instituição: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._NOME_INSTITUICAO}}<br>
+									<b>Codigo do orgão: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._CODIGO_ORGAO}}<br>
+									<b>Nome do orgão: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._NOME_ORGAO}}<br>
+									<b>Codigo do curso: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._CODIGO_CURSO}}<br>
+									<b>Nome do curso: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._NOME_CURSO}}<br>
+									<b>Nom do curso em ingles: </b>{{dc_quatro_tres_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_APERFEICOAMENTO_ESPECIALIZACAO._NOME_CURSO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Participantes</ion-item>
+								<ion-list ng-repeat="_dc_quatro_tres_ in dc_quatro_tres_.PARTICIPANTE_BANCA">
+									<b>Nome completo: </b>{{_dc_quatro_tres_._NOME_COMPLETO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Nome para citação: </b>{{_dc_quatro_tres_._NOME_PARA_CITACAO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Ordem participante: </b>{{_dc_quatro_tres_._ORDEM_PARTICIPANTE}}<br>
+									<b>Numero ID CNPq: </b>{{_dc_quatro_tres_._NRO_ID_CNPQ}}<br>
+								</ion-list>
+							</div>
+						</ion-list>
+						<ion-item ng-click="id.id_27 = !id.id_27">Banca de Graduação</ion-item>
+						<ion-list ng-show="id.id_27" ng-repeat="dc_quatro_quatro_ in dc_quatro_.CURRICULO_VITAE.DADOS_COMPLEMENTARES.PARTICIPACAO_EM_BANCA_TRABALHOS_CONCLUSAO.PARTICIPACAO_EM_BANCA_DE_GRADUACAO">
+							<div class="card">
+								<ion-item>Dados basicos</ion-item>
+								<ion-list>
+									<b>Titulo: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._TITULO}}<br>
+									<b>Natureza: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._NATUREZA}}<br>
+									<b>Ano: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._ANO}}<br>
+									<b>Pais: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._PAIS}}<br>
+									<b>Idioma: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._IDIOMA}}<br>
+									<b>Home page: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._HOME_PAGE}}<br>
+									<b>DOI: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._DOI}}<br>
+									<b>Titulo em ingles: </b>{{dc_quatro_quatro_.DADOS_BASICOS_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._TITULO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Detalhamento</ion-item>
+								<ion-list>
+									<b>Nome do candidato: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._NOME_DO_CANDIDATO}}<br>
+									<b>Codigo da instituição: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._CODIGO_INSTITUICAO}}<br>
+									<b>Nome da instituição: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._NOME_INSTITUICAO}}<br>
+									<b>Codigo do orgão: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._CODIGO_ORGAO}}<br>
+									<b>Nome do orgão: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._NOME_ORGAO}}<br>
+									<b>Codigo do curso: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._CODIGO_CURSO}}<br>
+									<b>Nome do curso: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._NOME_CURSO}}<br>
+									<b>Nome do curso em ingles: </b>{{dc_quatro_quatro_.DETALHAMENTO_DA_PARTICIPACAO_EM_BANCA_DE_GRADUACAO._NOME_CURSO_INGLES}}<br>
+								</ion-list>
+								<ion-item>Participantes</ion-item>
+								<ion-list ng-repeat="_dc_quatro_quatro in dc_quatro_quatro_.PARTICIPANTE_BANCA">
+									<b>Nome completo: </b>{{_dc_quatro_quatro_._NOME_COMPLETO_DO_PARTICIPANTE_DA_BANCA}}<br>
+									<b>Nome para citação: </b>{{_dc_quatro_quatro_._NOME_PARA_CITACAO_DO_PARTICIPANTE_DA_BANCA}<br>
+									<b>Ordem participãnte: </b>{{_dc_quatro_quatro_._ORDEM_PARTICIPANTE}}<br>
+									<b>Numero ID CNPq: </b>{{_dc_quatro_quatro_._NRO_ID_CNPQ}}<br>
+								</ion-list>
+							</div>
+						</ion-list>
+					</ion-list>
+				</div>
 			</ion-list>
 		</ion-list>
 	</ion-content>
