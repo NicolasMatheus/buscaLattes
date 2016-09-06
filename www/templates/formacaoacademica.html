@@ -1,582 +1,166 @@
 <ion-view view-title="Formação Academica">
     <ion-content>
         <ion-list ng-repeat="fat in dadosCurriculo">
-            <ion-item>
-                <b>FORMAÇÃO ACADEMICA TITULAÇÃO</b>
-            </ion-item>
-            <center>
-                <label>
-                    <p>Digite uma formação academica <br>
-                    <span>(Graduacao, Mestrado, Doutorado, Posdoc)</span></p>
-                </label>
-                <input type="text" ng-model="formacao" placeholder="Digite aqui !">
-            </center>
-            <ion-list ng-show="formacao == 'Graduacao'">
-                <ion-item>
-                    <b>GRADUAÇÃO</b>
-                </ion-item>
-                <p>
-                    <b>Sequencia formação:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._SEQUENCIA_FORMACAO}}
-                </p>
-                <p>
-                    <b>Graduação nivel:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NIVEL}}
-                </p>
-                <p>
-                    <b>Titulo do trabalho de conclusao de curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._TITULO_DO_TRABALHO_DE_CONCLUSAO_DE_CURSO}}
-                </p>
-                <p>
-                    <b>Nome do orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_DO_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Codigo instituição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Nome instituição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Codigo orgão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_ORGAO}}
-                </p>
-                <p>
-                    <b>Nome orgão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_ORGAO}}
-                </p>
-                <p>
-                    <b>Codigo curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_CURSO}}
-                </p>
-                <p>
-                    <b>Nome curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_CURSO}}
-                </p>
-                <p>
-                    <b>Codigo area curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_AREA_CURSO}}
-                </p>
-                <p>
-                    <b>Status do curso:</b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._STATUS_DO_CURSO}}
-                </p>
-                <p>
-                    <b>Ano de inicio:</b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._ANO_DE_INICIO}}
-                </p>
-                <p>
-                    <b>Ano de conclusão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._ANO_DE_CONCLUSAO}}
-                </p>
-                <p>
-                    <b>Flag bolsa:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._FLAG_BOLSA}}
-                </p>
-                <p>
-                    <b>Codigo agencia financiadora:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_AGENCIA_FINANCIADORA}}
-                </p>
-                <p>
-                    <b>Nome agencia:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_AGENCIA}}
-                </p>
-                <p>
-                    <b>Numero id orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NUMERO_ID_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Codigo curso capes:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_CURSO_CAPES}}
-                </p>
-                <p>
-                    <b>Titulo do trabalho de conclusão de curso ingles:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._TITULO_DO_TRABALHO_DE_CONCLUSAO_DE_CURSO_INGLES}}
-                </p>
-                <p>
-                    <b>Nome curso ingles:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_CURSO_INGLES}}
-                </p>
-                <p>
-                    <b>Formação academica titulação:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._FORMACAO_ACADEMICA_TITULACAO}}
-                </p>
-                <p>
-                    <b>Tipo graduação:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._TIPO_GRADUACAO}}
-                </p>
-                <p>
-                    <b>Codigo instituição:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_INSTITUICAO_GRAD}}
-                </p>
-                <p>
-                    <b>Nome instituição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_INSTITUICAO_GRAD}}
-                </p>
-                <p>
-                    <b>Codigo instituição outra:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_INSTITUICAO_OUTRA_GRAD}}
-                </p>
-                <p>
-                    <b>Nome instituição outra:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_INSTITUICAO_OUTRA_GRAD}}
-                </p>
-                <p>
-                    <b>Nome orientador outra:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_ORIENTADOR_GRAD}}
-                </p> 
-            </ion-list>
-            <ion-list ng-show="formacao == 'Mestrado'"> 
-                <ion-item>
-                    <b>MESTRADO</b>
-                </ion-item>
-                <p>
-                    <b>Palavra chave:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_1}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_2}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_3}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_4}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_5}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_6}}
-                </p>
-                <p>
-                    <b>Nome grande area do conhecimento:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da area do conhecimento:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da sub area do conhecimento:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_SUB_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da especialidade:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_ESPECIALIDADE}}
-                </p>
-                <p>
-                    <b>Sequencia formação:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._SEQUENCIA_FORMACAO}}
-                </p>
-                <p>
-                    <b>Nivel:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NIVEL}}
-                </p>
-                <p>
-                    <b>Codigo instuição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Nome instituição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Codigo orgão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_ORGAO}}
-                </p>
-                <p>
-                    <b>Codigo curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_CURSO}}
-                </p>
-                <p>
-                    <b>Nome curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_CURSO}}
-                </p>
-                <p>
-                    <b>Codigo area curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_AREA_CURSO}}
-                </p>
-                <p>
-                    <b>Status do curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._STATUS_DO_CURSO}}
-                </p>
-                <p>
-                    <b>Ano de inicio:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._ANO_DE_INICIO}}
-                </p>
-                <p>
-                    <b>Ano de conclusão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._ANO_DE_CONCLUSAO}}
-                </p>
-                <p>
-                    <b>Flag bolsa:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._FLAG_BOLSA}}
-                </p>
-                <p>
-                    <b>Codigo agencia financiadora:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_AGENCIA_FINANCIADORA}}
-                </p>
-                <p>
-                    <b>Nome agencia:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_AGENCIA}}
-                </p>
-                <p>
-                    <b>Ano de obtenção do titulo:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._ANO_DE_OBTENCAO_DO_TITULO}}
-                </p>
-                <p>
-                    <b>Titulo da dissertação tese:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._TITULO_DA_DISSERTACAO_TESE}}
-                </p>
-                <p>
-                    <b>Nomde completo do orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_COMPLETO_DO_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Tipo mestrado:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._TIPO_MESTRADO}}
-                </p>
-                <p>
-                    <b>Numero id orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NUMERO_ID_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Codigo curso capes:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_CURSO_CAPES}}
-                </p>
-                <p>
-                    <b>Titulo da dissertação tese ingles:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._TITULO_DA_DISSERTACAO_TESE_INGLES}}
-                </p>
-                <p>
-                    <b>Nome curso ingles:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_CURSO_INGLES}}
-                </p>
-                <p>
-                    <b>Nome do Co-orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_DO_CO_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Codigo instituição dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_INSTITUICAO_DOUT}}
-                </p>
-                <p>
-                    <b>Nome instituição dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_INSTITUICAO_DOUT}}
-                </p>
-                <p>
-                    <b>Codigo instituição outra dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_INSTITUICAO_OUTRA_DOUT}}
-                </p>
-                <p>
-                    <b>Nome instituição outra dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_INSTITUICAO_OUTRA_DOUT}}
-                </p>
-                <p>
-                    <b>Nome orientador dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_ORIENTADOR_DOUT}}
-                </p>
-            </ion-list>
-            <ion-list ng-show="formacao == 'Doutorado'">
-                <ion-item>
-                    <b>DOUTORADO</b>
-                </ion-item>
-                <p>
-                    <b>Palavra chave:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_1}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_2}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_3}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_4}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_5}}
-                </p>
-                <p>
-                    <b>Palavra chave:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_6}}
-                </p>
-                <p>
-                    <b>Nome grande area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da sub area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_SUB_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da especialidade:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_ESPECIALIDADE}}
-                </p>
-                <p>
-                    <b>Nome grande area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_GRANDE_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da sub area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_SUB_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da especialidade:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_ESPECIALIDADE}}
-                </p>
-                <p>
-                    <b>Sequencia formação:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._SEQUENCIA_FORMACAO}}
-                </p>
-                <p>
-                    <b>Nivel:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NIVEL}}
-                </p>
-                <p>
-                    <b>Codigo instuição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Nome instituição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Codigo orgão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_ORGAO}}
-                </p>
-                <p>
-                    <b>Nome orgão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_ORGAO}}
-                </p>
-                <p>
-                    <b>Codigo curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_CURSO}}
-                </p>
-                <p>
-                    <b>Nome curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_CURSO}}
-                </p>
-                <p>
-                    <b>Codigo area curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_AREA_CURSO}}
-                </p>
-                <p>
-                    <b>Status do curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._STATUS_DO_CURSO}}
-                </p>
-                <p>
-                    <b>Ano de inicio:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._ANO_DE_INICIO}}
-                </p>
-                <p>
-                    <b>Ano de conclusão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._ANO_DE_CONCLUSAO}}
-                </p>
-                <p>
-                    <b>Flag bolsa:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._FLAG_BOLSA}}
-                </p>
-                <p>
-                    <b>Codigo agencia financiadora:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_AGENCIA_FINANCIADORA}}
-                </p>
-                <p>
-                    <b>Nome agencia:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_AGENCIA}}
-                </p>
-                <p>
-                    <b>Ano de obtenção do titulo:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._ANO_DE_OBTENCAO_DO_TITULO}}
-                </p>
-                <p>
-                    <b>Titulo da dissertação tese:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._TITULO_DA_DISSERTACAO_TESE}}
-                </p>
-                <p>
-                    <b>Nome completo do orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_COMPLETO_DO_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Tipo doutorado:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._TIPO_DOUTORADO}}
-                </p>
-                <p>
-                    <b>Codigo instituição dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_DOUT}}
-                </p>
-                <p>
-                    <b>Nome instituição dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_INSTITUICAO_DOUT}}
-                </p>
-                <p>
-                    <b>Nome orientador dout:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.NOME_ORIENTADOR_DOUT}}
-                </p>
-                <p>
-                    <b>Nome id orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NUMERO_ID_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Codigo curso capes:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_CURSO_CAPES}}
-                </p>
-                <p>
-                    <b>Titulo da dissertação:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._TITULO_DA_DISSERTACAO_TESE_INGLES}}
-                </p>
-                <p>
-                    <b>Nome curso ingles:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_CURSO_INGLES}}
-                </p>
-                <p>
-                    <b>Nome do orientador co tutela:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_ORIENTADOR_CO_TUTELA}}
-                </p>
-                <p>
-                    <b>Codigo instituição co tutela:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_CO_TUTELA}}
-                </p>
-                <p>
-                    <b>Nome do orientador sanduiche:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_ORIENTADOR_SANDUICHE}}
-                </p>
-                <p>
-                    <b>Codigo instituição outra sanduiche:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_OUTRA_SANDUICHE}}
-                </p>
-                <p>
-                    <b>Codigo instituição sanduiche:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_SANDUICHE}}
-                </p>
-                <p>
-                    <b>Nome do co orientador:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_CO_ORIENTADOR}}
-                </p> 
-            </ion-list>
-            <ion-list ng-show="formacao == 'Posdoc'"> 
-                <ion-item>
-                    <b>POS-DOUTORADO</b>
-                </ion-item>
-                <p>
-                    <b>Nome grande area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da sub area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_SUB_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da especialidade:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_ESPECIALIDADE}}
-                </p>
-                <p>
-                    <b>Nome grande area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_GRANDE_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da sub area do conhecimento:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_SUB_AREA_DO_CONHECIMENTO}}
-                </p>
-                <p>
-                    <b>Nome da especialidade:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_ESPECIALIDADE}}
-                </p>
-                <p>
-                    <b>Sequencia formação:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._SEQUENCIA_FORMACAO}}
-                </p>
-                <p>
-                    <b>Nivel:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NIVEL}}
-                </p>
-                <p>
-                    <b>Codigo instuição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._CODIGO_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Nome instituição:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NOME_INSTITUICAO}}
-                </p>
-                <p>
-                    <b>Ano de inicio:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._ANO_DE_INICIO}}
-                </p>
-                <p>
-                    <b>Ano de conclusão:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._ANO_DE_CONCLUSAO}}
-                </p>
-                <p>
-                    <b>Ano de obtenção do titulo:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._ANO_DE_OBTENCAO_DO_TITULO}}
-                </p>
-                <p>
-                    <b>Flag bolsa:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._FLAG_BOLSA}}
-                </p>
-                <p>
-                    <b>Codigo agencia financiadora:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._CODIGO_AGENCIA_FINANCIADORA}}
-                </p>
-                <p>
-                    <b>Nome agencia:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NOME_AGENCIA}}
-                </p>
-                <p>
-                    <b>Status do estagio:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._STATUS_DO_ESTAGIO}}
-                </p>
-                <p>
-                    <b>Status do curso:</b> 
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._STATUS_DO_CURSO}}
-                </p>
-                <p>
-                    <b>Numero id orientador:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NUMERO_ID_ORIENTADOR}}
-                </p>
-                <p>
-                    <b>Codigo curso capes:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._CODIGO_CURSO_CAPES}}
-                </p>
-                <p>
-                    <b>Titulo do trabalho:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._TITULO_DO_TRABALHO}}
-                </p>
-                <p>
-                    <b>Titulo do trabalho ingles:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._TITULO_DO_TRABALHO_INGLES}}
-                </p>
-                <p>
-                    <b>Nome curso ingles:</b>
-                    {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NOME_CUSO_INGLES}}
-                </p>
-            </ion-list>
+            <ion-item>Formação academica</ion-item>
+            <div class="card">
+                <ion-item ng-click="id.id_1 = !id.id_1">Graduação</ion-item>
+                <ion-list ng-show="id.id_1">
+                    <div class="card">
+                        <b>Sequencia formação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._SEQUENCIA_FORMACAO}} <br>
+                        <b>Graduação nivel: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NIVEL}} <br>
+                        <b>Titulo do trabalho de conclusao de curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._TITULO_DO_TRABALHO_DE_CONCLUSAO_DE_CURSO}} <br>
+                        <b>Nome do orientador: </b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_DO_ORIENTADOR}} <br>
+                        <b>Codigo instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_INSTITUICAO}} <br>
+                        <b>Nome instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_INSTITUICAO}} <br>
+                        <b>Codigo orgão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_ORGAO}} <br>
+                        <b>Nome orgão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_ORGAO}} <br>
+                        <b>Codigo curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_CURSO}} <br>
+                        <b>Nome curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_CURSO}} <br>
+                        <b>Codigo area curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_AREA_CURSO}} <br>
+                        <b>Status do curso:</b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._STATUS_DO_CURSO}} <br>
+                        <b>Ano de inicio: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._ANO_DE_INICIO}} <br>
+                        <b>Ano de conclusão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._ANO_DE_CONCLUSAO}} <br>
+                        <b>Flag bolsa: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._FLAG_BOLSA}} <br>
+                        <b>Codigo agencia financiadora: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_AGENCIA_FINANCIADORA}} <br>
+                        <b>Nome agencia: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_AGENCIA}} <br>
+                        <b>Numero id orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NUMERO_ID_ORIENTADOR}} <br>
+                        <b>Codigo curso capes: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_CURSO_CAPES}} <br>
+                        <b>Titulo do trabalho de conclusão de curso ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._TITULO_DO_TRABALHO_DE_CONCLUSAO_DE_CURSO_INGLES}} <br>
+                        <b>Nome curso ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_CURSO_INGLES}} <br>
+                        <b>Formação academica titulação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._FORMACAO_ACADEMICA_TITULACAO}} <br>
+                        <b>Tipo graduação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._TIPO_GRADUACAO}} <br>
+                        <b>Codigo instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_INSTITUICAO_GRAD}} <br>
+                        <b>Nome instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_INSTITUICAO_GRAD}} <br>
+                        <b>Codigo instituição outra: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._CODIGO_INSTITUICAO_OUTRA_GRAD}} <br>
+                        <b>Nome instituição outra: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_INSTITUICAO_OUTRA_GRAD}} <br>
+                        <b>Nome orientador outra: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.GRADUACAO._NOME_ORIENTADOR_GRAD}} <br>
+                    </div>
+                </ion-list>
+                <ion-item ng-click="id.id_2 = !id.id_2">Mestrado</ion-item>
+                <ion-list ng-show="id.id_2">
+                    <div class="card">
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_1}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_2}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_3}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_4}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_5}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_6}} <br>
+                        <b>Nome grande area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da sub area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da especialidade: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_ESPECIALIDADE}} <br>
+                        <b>Sequencia formação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._SEQUENCIA_FORMACAO}} <br>
+                        <b>Nivel: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NIVEL}} <br>
+                        <b>Codigo instuição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_INSTITUICAO}} <br>
+                        <b>Nome instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_INSTITUICAO}} <br>
+                        <b>Codigo orgão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_ORGAO}} <br>
+                        <b>Codigo curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_CURSO}} <br>
+                        <b>Nome curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_CURSO}} <br>
+                        <b>Codigo area curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_AREA_CURSO}} <br>
+                        <b>Status do curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._STATUS_DO_CURSO}} <br>
+                        <b>Ano de inicio: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._ANO_DE_INICIO}} <br>
+                        <b>Ano de conclusão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._ANO_DE_CONCLUSAO}} <br>
+                        <b>Flag bolsa: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._FLAG_BOLSA}} <br>
+                        <b>Codigo agencia financiadora: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_AGENCIA_FINANCIADORA}} <br>
+                        <b>Nome agencia: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_AGENCIA}} <br>
+                        <b>Ano de obtenção do titulo: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._ANO_DE_OBTENCAO_DO_TITULO}} <br>
+                        <b>Titulo da dissertação tese: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._TITULO_DA_DISSERTACAO_TESE}} <br>
+                        <b>Nomde completo do orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_COMPLETO_DO_ORIENTADOR}} <br>
+                        <b>Tipo mestrado: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._TIPO_MESTRADO}} <br>
+                        <b>Numero id orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NUMERO_ID_ORIENTADOR}} <br>
+                        <b>Codigo curso capes: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_CURSO_CAPES}} <br>
+                        <b>Titulo da dissertação tese ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._TITULO_DA_DISSERTACAO_TESE_INGLES}} <br>
+                        <b>Nome curso ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_CURSO_INGLES}} <br>
+                        <b>Nome do Co-orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_DO_CO_ORIENTADOR}} <br>
+                        <b>Codigo instituição dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_INSTITUICAO_DOUT}} <br>
+                        <b>Nome instituição dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_INSTITUICAO_DOUT}} <br>
+                        <b>Codigo instituição outra dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._CODIGO_INSTITUICAO_OUTRA_DOUT}} <br>
+                        <b>Nome instituição outra dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_INSTITUICAO_OUTRA_DOUT}} <br>
+                        <b>Nome orientador dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.MESTRADO._NOME_ORIENTADOR_DOUT}} <br>
+                    </div>
+                </ion-list>
+                <ion-item ng-click="id.id_3 = !id.id_3">Doutorado</ion-item>
+                <ion-list ng-show="id.id_3">
+                    <div class="card">
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_1}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_2}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_3}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_4}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_5}} <br>
+                        <b>Palavra chave: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.PALAVRAS_CHAVE._PALAVRA_CHAVE_6}} <br>
+                        <b>Nome grande area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da sub area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da especialidade: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_ESPECIALIDADE}} <br>
+                        <b>Nome grande area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da sub area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da especialidade: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_ESPECIALIDADE}} <br>
+                        <b>Sequencia formação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._SEQUENCIA_FORMACAO}} <br>
+                        <b>Nivel: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NIVEL}} <br>
+                        <b>Codigo instuição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO}} <br>
+                        <b>Nome instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_INSTITUICAO}} <br>
+                        <b>Codigo orgão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_ORGAO}} <br>
+                        <b>Nome orgão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_ORGAO}} <br>
+                        <b>Codigo curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_CURSO}} <br>
+                        <b>Nome curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_CURSO}} <br>
+                        <b>Codigo area curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_AREA_CURSO}} <br>
+                        <b>Status do curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._STATUS_DO_CURSO}} <br>
+                        <b>Ano de inicio: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._ANO_DE_INICIO}} <br>
+                        <b>Ano de conclusão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._ANO_DE_CONCLUSAO}} <br>
+                        <b>Flag bolsa: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._FLAG_BOLSA}} <br>
+                        <b>Codigo agencia financiadora: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_AGENCIA_FINANCIADORA}} <br>
+                        <b>Nome agencia: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_AGENCIA}} <br>
+                        <b>Ano de obtenção do titulo: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._ANO_DE_OBTENCAO_DO_TITULO}} <br>
+                        <b>Titulo da dissertação tese: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._TITULO_DA_DISSERTACAO_TESE}} <br>
+                        <b>Nome completo do orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_COMPLETO_DO_ORIENTADOR}} <br>
+                        <b>Tipo doutorado: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._TIPO_DOUTORADO}} <br>
+                        <b>Codigo instituição dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_DOUT}} <br>
+                        <b>Nome instituição dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_INSTITUICAO_DOUT}} <br>
+                        <b>Nome orientador dout: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO.NOME_ORIENTADOR_DOUT}} <br>
+                        <b>Nome id orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NUMERO_ID_ORIENTADOR}} <br>
+                        <b>Codigo curso capes: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_CURSO_CAPES}} <br>
+                        <b>Titulo da dissertação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._TITULO_DA_DISSERTACAO_TESE_INGLES}} <br>
+                        <b>Nome curso ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_CURSO_INGLES}} <br>
+                        <b>Nome do orientador co tutela: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_ORIENTADOR_CO_TUTELA}} <br>
+                        <b>Codigo instituição co tutela: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_CO_TUTELA}} <br>
+                        <b>Nome do orientador sanduiche: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_ORIENTADOR_SANDUICHE}} <br>
+                        <b>Codigo instituição outra sanduiche: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_OUTRA_SANDUICHE}} <br>
+                        <b>Codigo instituição sanduiche: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._CODIGO_INSTITUICAO_SANDUICHE}} <br>
+                        <b>Nome do co orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.DOUTORADO._NOME_DO_CO_ORIENTADOR}} <br>
+                    </div>
+                </ion-list> 
+                <ion-item ng-click="id.id_4 = !id.id_4">Pos-Doutorado</ion-item>
+                <ion-list ng-show="id.id_4">
+                    <div class="card">
+                        <b>Nome grande area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da sub area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da especialidade: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_1._NOME_DA_ESPECIALIDADE}} <br>
+                        <b>Nome grande area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_GRANDE_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da sub area do conhecimento: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_SUB_AREA_DO_CONHECIMENTO}} <br>
+                        <b>Nome da especialidade: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO.AREAS_DO_CONHECIMENTO.AREA_DO_CONHECIMENTO_2._NOME_DA_ESPECIALIDADE}} <br>
+                        <b>Sequencia formação: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._SEQUENCIA_FORMACAO}} <br>
+                        <b>Nivel: </b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NIVEL}} <br>
+                        <b>Codigo instuição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._CODIGO_INSTITUICAO}} <br>
+                        <b>Nome instituição: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NOME_INSTITUICAO}} <br>
+                        <b>Ano de inicio: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._ANO_DE_INICIO}} <br>
+                        <b>Ano de conclusão: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._ANO_DE_CONCLUSAO}} <br>
+                        <b>Ano de obtenção do titulo: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._ANO_DE_OBTENCAO_DO_TITULO}} <br>
+                        <b>Flag bolsa: </b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._FLAG_BOLSA}} <br>
+                        <b>Codigo agencia financiadora: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._CODIGO_AGENCIA_FINANCIADORA}} <br>
+                        <b>Nome agencia: </b> {{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NOME_AGENCIA}} <br>
+                        <b>Status do estagio: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._STATUS_DO_ESTAGIO}} <br>
+                        <b>Status do curso: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._STATUS_DO_CURSO}} <br>
+                        <b>Numero id orientador: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NUMERO_ID_ORIENTADOR}} <br>
+                        <b>Codigo curso capes: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._CODIGO_CURSO_CAPES}} <br>
+                        <b>Titulo do trabalho: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._TITULO_DO_TRABALHO}} <br>
+                        <b>Titulo do trabalho ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._TITULO_DO_TRABALHO_INGLES}} <br>
+                        <b>Nome curso ingles: </b>{{fat.CURRICULO_VITAE.DADOS_GERAIS.FORMACAO_ACADEMICA_TITULACAO.POS_DOUTORADO._NOME_CUSO_INGLES}} <br>
+                    </div>
+                </ion-list>
+            </div>
         </ion-list>
     </ion-content>
 </ion-view>
