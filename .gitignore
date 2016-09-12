@@ -50,6 +50,7 @@ platforms/
 plugins/
 www/lib/**/
 www/lib/ionic/**/*
+www/lib/*
 
 # Multimidia #
 # ###########
